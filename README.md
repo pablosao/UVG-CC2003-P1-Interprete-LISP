@@ -3,10 +3,10 @@ Desarrollo de un intérprete LISP para un subconjunto sencillo de instrucciones 
 
 Para entender LISP se recomienda instalar para Windows:
 
-* (LipStick!)[http://www.iqool.de/lispstick.html#sec-1]
+* [LipStick!](http://www.iqool.de/lispstick.html#sec-1)
 
 Si la instalación se realizara en una distribución GNU/Linux, o en OS X se puede ingresar a:
-* (LISP-lang.org)[https://lisp-lang.org/learn/getting-started/]
+* [LISP-lang.org](https://lisp-lang.org/learn/getting-started/)
 
 ### Prerequisitos
 
