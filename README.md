@@ -31,5 +31,6 @@ Para el UML
 
 * **Pablo Sao** - [psao](https://github.com/psao)
 * **Marco Flores** - [maflodi97](https://github.com/maflodi97)
+* **Juan Fernando de Leon** - [juanferdeleon](https://github.com/juanferdeleon)
 
 
