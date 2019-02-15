@@ -10,8 +10,13 @@ Si la instalación se realizara en una distribución GNU/Linux, o en OS X se pue
 
 ### Prerequisitos
 
+Para ejecutar el programa es necesario contar con:
 
+* Java >= 8.0.172
 
+Para el UML
+* [Dia Diagram Editor](https://sourceforge.net/projects/dia-installer/)
+* [Microsoft Visio](https://products.office.com/es/visio/flowchart-software)  
 
 ### Uso de la Aplicación
 
