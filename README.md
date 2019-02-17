@@ -1,12 +1,17 @@
 # Interprete LISP
 Desarrollo de un intérprete LISP para un subconjunto sencillo de instrucciones de alguno de los dos dialectos principales (Common LISP y Scheme).
 
-Para entender LISP se recomienda instalar para Windows:
+## ¿Qué es LISP?
+Es un lenguaje multiparadigma, que muestran información estructurada en listas, donde se puede procesar la información que contienen. Utilizado para probar programas y resolver problemas no numéricos, como el análisis del lenguaje natural o la presentación de diálogos, e incluso la manipulación de fórmulas simbólicas (Knott, 2017).
 
-* [LipStick!](http://www.iqool.de/lispstick.html#sec-1)
+Para poder conocer la sintaxis de **LISP**, se utilizaron los siguintes tutoriales:
 
-Si la instalación se realizara en una distribución GNU/Linux, o en OS X se puede ingresar a:
-* [LISP-lang.org](https://lisp-lang.org/learn/getting-started/)
+* [(Alonso, 1997)](#referencias)
+* [Tutorials Point - LISP Tutorial](https://www.tutorialspoint.com/lisp/lisp_program_structure.htm)
+* [Common Lisp HyperSpec](http://clhs.lisp.se/Body/c_conses.htm)
+
+Descargando [**LipStick!**](http://www.iqool.de/lispstick.html#sec-1) para Windows, y realizar las pruebas de sintaxis. Si se desea instalar LISP en otro sistema operativo; como una distribución GNU/Linus o en OS X, ingresar a [LISP-lang.org](https://lisp-lang.org/learn/getting-started/) para obtener información de la instalación.
+
 
 ### Prerequisitos
 
@@ -23,11 +28,13 @@ Para el UML
 
 
 
-### Referencias
+# Referencias
+
+* Alonso, J. (1997). Manual de Lisp. Extraído de: http://www.cs.us.es/~jalonso/pub/1991-Lisp-manual.pdf
+* Knott, G. (2017). _Interpreting LISP: Programming and Data Structures_. 2da edición. Maryland, USA: APRESS. 91 – 92 pp.
 
 
-
-## Autores
+# Autores
 
 * **Pablo Sao** - [psao](https://github.com/psao)
 * **Marco Flores** - [maflodi97](https://github.com/maflodi97)
