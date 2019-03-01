@@ -11,6 +11,10 @@ public class InterpreteLisp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        FileManager archivo = new FileManager();
+        
+        System.out.println(archivo.getDataFile("C:\\dato.txt"));
     }
     
 }
