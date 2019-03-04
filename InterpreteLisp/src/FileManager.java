@@ -3,12 +3,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author pablo
@@ -16,31 +10,36 @@ import java.io.FileReader;
  */
 public class FileManager {
     
+    String PATH_FILE = "";
+    
+    /***
+     * Constructor utilizado para setear el path del file
+     * @param path path de la ruta del archivo
+     */
+    public FileManager(String path){
+        PATH_FILE = path;
+    }
+    
     /***
      * Metodo para la obtención del contenido de un archivo
      * @param path ruta fisica del archivo
      * @return string con los datos del archivo
      */
-    public String getDataFile(String path){
+    public String getDataFile(){
         BufferedReader reader;
         String linea,datos = "";
+        
         try{
-            if((new File(path)).exists()){ //verificamos que el archivo exista
+            reader = new BufferedReader(new FileReader(PATH_FILE));
                 
-                
-                reader = new BufferedReader(new FileReader(path));
-                
-                while((linea = reader.readLine()) != null){
-                    //concatenamos con un tabular la lectura de la linea,
-                    //el tabular se eliminara al separar las expresiones.
-                    datos += linea;
-                }
-                
-                reader.close();
+            while((linea = reader.readLine()) != null){
+                //concatenamos con un tabular la lectura de la linea,
+                //el tabular se eliminara al separar las expresiones.
+                datos += linea + "\n";
             }
-            else{
-                System.out.println(String.format("El archivo no fue encontrado en la ruta: %s",path));
-            }
+            
+            // Cerramos la conexion
+            reader.close();
             
         }
         //Tomaremos todo tipo de error en la ejecución del bloque de codigo dentro del catch
@@ -49,5 +48,13 @@ public class FileManager {
         }
         
         return datos;
+    }
+    
+    /***
+     * Metodo para verificar la existencia del archivo ingresado
+     * @return true si el archivo existe, false si el archivo no existe
+     */
+    public boolean getExists(){
+        return (new File(PATH_FILE)).exists();
     }
 }
