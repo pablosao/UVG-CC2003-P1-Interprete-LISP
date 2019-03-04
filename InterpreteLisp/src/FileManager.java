@@ -16,6 +16,11 @@ import java.io.FileReader;
  */
 public class FileManager {
     
+    /***
+     * Metodo para la obtención del contenido de un archivo
+     * @param path ruta fisica del archivo
+     * @return string con los datos del archivo
+     */
     public String getDataFile(String path){
         BufferedReader reader;
         String linea,datos = "";
