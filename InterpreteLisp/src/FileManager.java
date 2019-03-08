@@ -63,12 +63,12 @@ public class FileManager {
     
     
     /**
-     * Metodo para obtener el array de caracteres
-     * @param datos String a separar por caracteres
-     * @return Array con los caracteres del String
+     * 
+     * @return 
      */
-    public char[] getCaracter(String datos){
-        return datos.toCharArray();
+    public char[] getCaracterDataFile(){
+        String tempData = getDataFile();
+        return tempData.toCharArray();
     }
     
 }

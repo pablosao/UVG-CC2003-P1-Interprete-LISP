@@ -20,7 +20,7 @@ public class InterpreteLisp {
         
         while(true){
             
-            System.out.println("\t\tMenú");
+            System.out.println("\n\t\tMenú");
             System.out.println("1) Ejecutar comando LISP");
             System.out.println("2) Salir");
             
@@ -35,7 +35,7 @@ public class InterpreteLisp {
                     FileManager archivo = new FileManager(path);
 
                     if(archivo.getExists()){
-                        buildTree(archivo.getDataFile());
+                        buildTree(archivo.getCaracterDataFile());
                     }
                     else{
                         System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
@@ -49,13 +49,17 @@ public class InterpreteLisp {
         
     }
     
-    
-    public static Map buildTree(String lisp){
+    /**
+     * 
+     * @param arrayChar
+     * @return 
+     */
+    public static Map buildTree(char[] arrayChar){
         
         //Mapa temporal para separar 
         Map mapa = new TreeMap();
         
-        System.out.print(lisp);
+        //System.out.print(lisp);
         
         return mapa;
         
