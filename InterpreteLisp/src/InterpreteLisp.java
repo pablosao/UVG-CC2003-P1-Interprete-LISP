@@ -1,4 +1,8 @@
 
+import java.util.Map;
+import java.util.TreeMap;
+
+
 /**
  *
  * @author pablo
@@ -19,35 +23,49 @@ public class InterpreteLisp {
             System.out.println("\t\tMenú");
             System.out.println("1) Ejecutar comando LISP");
             System.out.println("2) Salir");
+            
+            System.out.print("Ingrese la opción de archivo: ");
             opcion = Keyboard.readInt();
             
             switch(opcion){
                 case 1:
-                    runLisp();
+                    String path = "";
+                    System.out.print("Ingrese el Path del archivo: ");
+                    path = Keyboard.readString();
+                    FileManager archivo = new FileManager(path);
+
+                    if(archivo.getExists()){
+                        buildTree(archivo.getDataFile());
+                    }
+                    else{
+                        System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
+                    }
+                    break;
                 case 2:
                     System.exit(0);
             }
+            
         }
         
     }
     
+    
+    public static Map buildTree(String lisp){
+        
+        //Mapa temporal para separar 
+        Map mapa = new TreeMap();
+        
+        System.out.print(lisp);
+        
+        return mapa;
+        
+    }
+    
     /**
-     * Método para realizar la ejecución la instrucción LISP
+     * 
+     * @param instrucciones 
      */
-    public static void runLisp(){
-        String path = "";
-        System.out.println("Ingrese el Path del archivo: ");
-        
-        path = Keyboard.readString();
-        FileManager archivo = new FileManager(path);
-        
-        if(archivo.getExists()){
-            System.out.println(archivo.getDataFile());
-        }
-        else{
-            System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
-        }
-        
+    public static void runLisp(Map instrucciones){
         
     }
     

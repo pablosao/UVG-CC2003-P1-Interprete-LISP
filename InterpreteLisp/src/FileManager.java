@@ -2,6 +2,8 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -11,6 +13,7 @@ import java.io.FileReader;
 public class FileManager {
     
     String PATH_FILE = "";
+    final String DELIMITADOR = " \t\n\r\f";
     
     /***
      * Constructor utilizado para setear el path del file
@@ -57,4 +60,15 @@ public class FileManager {
     public boolean getExists(){
         return (new File(PATH_FILE)).exists();
     }
+    
+    
+    /**
+     * Metodo para obtener el array de caracteres
+     * @param datos String a separar por caracteres
+     * @return Array con los caracteres del String
+     */
+    public char[] getCaracter(String datos){
+        return datos.toCharArray();
+    }
+    
 }
