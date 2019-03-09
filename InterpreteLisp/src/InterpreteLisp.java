@@ -1,5 +1,6 @@
 
 import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.TreeMap;
 
 
@@ -35,7 +36,8 @@ public class InterpreteLisp {
                     FileManager archivo = new FileManager(path);
 
                     if(archivo.getExists()){
-                        buildTree(archivo.getCaracterDataFile());
+                        //buildTree(archivo.getCaracterDataFile());
+                        runLisp(archivo.getDataFile());
                     }
                     else{
                         System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
@@ -69,8 +71,15 @@ public class InterpreteLisp {
      * 
      * @param instrucciones 
      */
-    public static void runLisp(Map instrucciones){
+    public static void runLisp(String instrucciones){
+        String DELIMITADOR = "\n()";
+        StringTokenizer token = new StringTokenizer(instrucciones, DELIMITADOR);
         
+        while(token.hasMoreTokens()){
+            
+            System.out.println(token.nextToken());
+            
+        }
     }
     
 }

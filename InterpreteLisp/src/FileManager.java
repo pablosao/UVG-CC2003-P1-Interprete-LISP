@@ -61,14 +61,14 @@ public class FileManager {
         return (new File(PATH_FILE)).exists();
     }
     
-    
-    /**
-     * 
-     * @return 
-     */
-    public char[] getCaracterDataFile(){
-        String tempData = getDataFile();
-        return tempData.toCharArray();
-    }
+//    
+//    /**
+//     * 
+//     * @return 
+//     */
+//    public char[] getCaracterDataFile(){
+//        String tempData = getDataFile();
+//        return tempData.toCharArray();
+//    }
     
 }
