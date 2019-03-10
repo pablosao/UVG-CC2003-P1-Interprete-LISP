@@ -2,8 +2,10 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -61,14 +63,38 @@ public class FileManager {
         return (new File(PATH_FILE)).exists();
     }
     
-//    
-//    /**
-//     * 
-//     * @return 
-//     */
-//    public char[] getCaracterDataFile(){
-//        String tempData = getDataFile();
-//        return tempData.toCharArray();
-//    }
+    
+    /**
+     * Retorna un arreglo con cada caracter del string enviado
+     * @param datos String para separar en caracteres
+     * @return array de caracteres
+     */
+    public char[] getCaracterDataFile(String datos){
+        String tempData = getDataFile();
+        return tempData.toCharArray();
+    }
+    
+    /**
+     * Retorna ArrayList con los tokens creados
+     * @param parser string a descomponer en tokens
+     * @param delimitador delimitador para descomposición de tokens
+     * @return Array con los tokens crados, según el delimitador
+     */
+    public ArrayList getTokens(String parser, String delimitador){
+        
+        //Se crea array para almacenar los tokens
+        ArrayList datos = new ArrayList();
+        
+        //Se crean los tokens según el delimitador enviado
+        StringTokenizer token = new StringTokenizer(parser, delimitador);
+        
+        while(token.hasMoreTokens()){
+            //agregamos al array todos los tokens creados a partir del delimitador
+            datos.add(token.hasMoreTokens());
+        }
+        
+        return datos;
+        
+    }
     
 }

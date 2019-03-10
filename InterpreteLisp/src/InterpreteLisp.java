@@ -1,11 +1,8 @@
 
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
 
 
 /**
- *
+ * Programa pincipal desde el cual se ejecuta el interprete de LISP
  * @author pablo
  * @version 03/02/2019
  */
@@ -53,33 +50,11 @@ public class InterpreteLisp {
     
     /**
      * 
-     * @param arrayChar
-     * @return 
-     */
-    public static Map buildTree(char[] arrayChar){
-        
-        //Mapa temporal para separar 
-        Map mapa = new TreeMap();
-        
-        //System.out.print(lisp);
-        
-        return mapa;
-        
-    }
-    
-    /**
-     * 
      * @param instrucciones 
      */
     public static void runLisp(String instrucciones){
         String DELIMITADOR = "\n()";
-        StringTokenizer token = new StringTokenizer(instrucciones, DELIMITADOR);
         
-        while(token.hasMoreTokens()){
-            
-            System.out.println(token.nextToken());
-            
-        }
     }
     
 }
