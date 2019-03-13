@@ -63,19 +63,9 @@ public class InterpreteLisp {
      * 
      * @param instrucciones 
      */
-    public static void runLisp(List instrucciones){
-        iLispController controlador = new LispController();
+    public static void runLisp(List instrucciones) throws Exception{
+        DataManager controlador = new DataManager();
         System.out.println(controlador.getInstruccion(instrucciones));
-        
-//        iLispController controlador = new LispController();
-//        try{
-//            System.out.println(controlador.getInstruccion(instrucciones));
-//        }
-//        catch(Exception e){
-//            System.out.println(e.toString());
-//        }
-        
-        //Evaluamos si contiene instrucciones reservadas del sistema
     }
     
 }

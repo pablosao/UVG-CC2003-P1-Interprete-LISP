@@ -1,7 +1,6 @@
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Vector;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,74 +13,33 @@ import java.util.Vector;
  * @author pablo
  */
 public class LispController implements iLispController{
+
+    iLispController SALIDA = null;
+    Map<Object,Object> MAPAS = new HashMap<Object,Object>();
     
-    final char[] SIMBOLOS_PERMITIDOS = {
-             '+'
-            ,'-'
-            ,'*'
-            ,'/'
-    };
+    public LispController(iLispController salida, Object[] parametros, Object[] argumentos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
-    final String[] PALABRAS_RESERVADAS = {
-             "DEFUN"
-            ,"ATOM"
-            ,"LIST"
-            ,"EQUAL"
-            
-    };
-    
-    @Override
-    public void operacion(String operador) {
+    public LispController() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean verificaSinbolos(String instruccion) {
+    public void put(Object key, Object valor) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 
     @Override
-    public List getInstruccion(List instruccion) {
-        
-        List parser = new ArrayList();
-        
-        String valor = instruccion.get(0).toString();
-        
-        if(valor.equals("(")){
-            instruccion.remove(0);
-            valor = instruccion.get(0).toString();
-        }
-        
-        
-        while(!instruccion.get(0).toString().equals(")")){
-            
-            if(valor.equals("(")){
-                
-                instruccion.remove(0);
-                
-                List temp = new ArrayList();
-                while(!instruccion.get(0).toString().equals(")")){
-                    temp.add(instruccion.get(0).toString());
-                    instruccion.remove(0);
-                }
-                parser.add(temp);
-                instruccion.remove(0);
-            }
-            else{
-                parser.add(instruccion.get(0).toString());
-                instruccion.remove(0);
-            }
-            
-            valor = instruccion.get(0).toString();
-            
-        }
-        
-               
-        
-        return parser;
+    public Object get(Object expresion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public boolean contieneKey(Object key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
