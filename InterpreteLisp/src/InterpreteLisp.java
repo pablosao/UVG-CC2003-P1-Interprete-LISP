@@ -1,4 +1,9 @@
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+
 
 
 /**
@@ -7,7 +12,8 @@
  * @version 03/02/2019
  */
 public class InterpreteLisp {
-
+    
+    final static String DELIMITADOR = "\n()";
     /**
      * @param args the command line arguments
      */
@@ -16,34 +22,39 @@ public class InterpreteLisp {
         
         int opcion = 0;
         
-        while(true){
-            
-            System.out.println("\n\t\tMenú");
-            System.out.println("1) Ejecutar comando LISP");
-            System.out.println("2) Salir");
-            
-            System.out.print("Ingrese la opción de archivo: ");
-            opcion = Keyboard.readInt();
-            
-            switch(opcion){
-                case 1:
-                    String path = "";
-                    System.out.print("Ingrese el Path del archivo: ");
-                    path = Keyboard.readString();
-                    FileManager archivo = new FileManager(path);
+        try{
+            while(true){
 
-                    if(archivo.getExists()){
-                        //buildTree(archivo.getCaracterDataFile());
-                        runLisp(archivo.getDataFile());
-                    }
-                    else{
-                        System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
-                    }
-                    break;
-                case 2:
-                    System.exit(0);
-            }
+                System.out.println("\n\t\tMenú");
+                System.out.println("1) Ejecutar comando LISP");
+                System.out.println("2) Salir");
+
+                System.out.print("Ingrese la opción: ");
+                opcion = Keyboard.readInt();
+
+                switch(opcion){
+                    case 1:
+                        String path = "";
+                        System.out.print("Ingrese el Path del archivo: ");
+                        path = Keyboard.readString();
+                        FileManager archivo = new FileManager(path);
+
+                        if(archivo.getExists()){
+                            //buildTree(archivo.getCaracterDataFile());
+                            runLisp(archivo.getTokens(DELIMITADOR));
+                        }
+                        else{
+                            System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
+                        }
+                        break;
+                    case 2:
+                        System.exit(0);
+                }
             
+            }
+        }
+        catch(Exception e){
+            System.out.println(String.format("\n\n\t\tOcurrio el problema: %s",e.toString()));
         }
         
     }
@@ -52,8 +63,9 @@ public class InterpreteLisp {
      * 
      * @param instrucciones 
      */
-    public static void runLisp(String instrucciones){
-        String DELIMITADOR = "\n()";
+    public static void runLisp(List instrucciones){
+        
+        System.out.println(instrucciones);
         
     }
     

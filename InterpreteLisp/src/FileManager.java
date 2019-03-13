@@ -3,9 +3,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -80,20 +83,24 @@ public class FileManager {
      * @param delimitador delimitador para descomposición de tokens
      * @return Array con los tokens crados, según el delimitador
      */
-    public ArrayList getTokens(String parser, String delimitador){
+    public List getTokens(String delimitador){
         
-        //Se crea array para almacenar los tokens
-        ArrayList datos = new ArrayList();
+//        //Se crea array para almacenar los tokens
+//        List datos = new ArrayList();
+//        
+//        //Se crean los tokens según el delimitador enviado
+//        StringTokenizer token = new StringTokenizer(getDataFile(), delimitador);
+//        
+//        while(token.hasMoreTokens()){
+//            //agregamos al array todos los tokens creados a partir del delimitador
+//            datos.add(token.nextToken());
+//        }
+//        
+//        return datos;
         
-        //Se crean los tokens según el delimitador enviado
-        StringTokenizer token = new StringTokenizer(parser, delimitador);
-        
-        while(token.hasMoreTokens()){
-            //agregamos al array todos los tokens creados a partir del delimitador
-            datos.add(token.hasMoreTokens());
-        }
-        
-        return datos;
+        return Collections.list(new StringTokenizer(getDataFile(), delimitador)).stream()
+        .map(token -> (String) token)
+        .collect(Collectors.toList());
         
     }
     
