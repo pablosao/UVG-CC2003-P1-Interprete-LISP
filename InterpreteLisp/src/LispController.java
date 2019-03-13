@@ -44,6 +44,23 @@ public class LispController implements iLispController{
     @Override
     public List getInstruccion(List instruccion) {
         List seccion = new ArrayList();
+        String registro = "";
+        
+        //Obtenemos el primer registro de la cadena
+        registro = instruccion.get(0).toString();
+        
+        //eliminamos el registro obtenido
+        instruccion.remove(0);
+        
+        //Verificamos si es el inicio de una instruccion
+        if(registro.equals("(")){
+           
+            //Asignamos el nuevo registro a evaluar
+            registro = instruccion.get(0).toString();
+            
+            
+            
+        }
 //        
 //        String registro = instruccion.get(0).toString();
 //                

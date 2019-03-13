@@ -65,20 +65,15 @@ public class InterpreteLisp {
      */
     public static void runLisp(List instrucciones){
         
+        System.out.println(instrucciones);
+        
 //        iLispController controlador = new LispController();
-//        if(controlador.verificaSintaxis(instrucciones.get(0).toString().replace(" ",""))){
-//            System.out.println("Sintaxis correcta");
+//        try{
+//            System.out.println(controlador.getInstruccion(instrucciones));
 //        }
-//        else{
-//            System.out.println("Contiene simbolos no permitidos");
+//        catch(Exception e){
+//            System.out.println(e.toString());
 //        }
-        iLispController controlador = new LispController();
-        try{
-            System.out.println(controlador.getInstruccion(instrucciones));
-        }
-        catch(Exception e){
-            System.out.println(e.toString());
-        }
         
         //Evaluamos si contiene instrucciones reservadas del sistema
     }
