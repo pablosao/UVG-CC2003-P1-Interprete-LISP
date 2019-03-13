@@ -64,8 +64,8 @@ public class InterpreteLisp {
      * @param instrucciones 
      */
     public static void runLisp(List instrucciones){
-        
-        System.out.println(instrucciones);
+        iLispController controlador = new LispController();
+        System.out.println(controlador.getInstruccion(instrucciones));
         
 //        iLispController controlador = new LispController();
 //        try{

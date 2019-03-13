@@ -43,50 +43,43 @@ public class LispController implements iLispController{
 
     @Override
     public List getInstruccion(List instruccion) {
-        List seccion = new ArrayList();
-        String registro = "";
         
-        //Obtenemos el primer registro de la cadena
-        registro = instruccion.get(0).toString();
+        List parser = new ArrayList();
         
-        //eliminamos el registro obtenido
-        instruccion.remove(0);
+        String valor = instruccion.get(0).toString();
         
-        //Verificamos si es el inicio de una instruccion
-        if(registro.equals("(")){
-           
-            //Asignamos el nuevo registro a evaluar
-            registro = instruccion.get(0).toString();
+        if(valor.equals("(")){
+            instruccion.remove(0);
+            valor = instruccion.get(0).toString();
+        }
+        
+        
+        while(!instruccion.get(0).toString().equals(")")){
             
+            if(valor.equals("(")){
+                
+                instruccion.remove(0);
+                
+                List temp = new ArrayList();
+                while(!instruccion.get(0).toString().equals(")")){
+                    temp.add(instruccion.get(0).toString());
+                    instruccion.remove(0);
+                }
+                parser.add(temp);
+                instruccion.remove(0);
+            }
+            else{
+                parser.add(instruccion.get(0).toString());
+                instruccion.remove(0);
+            }
             
+            valor = instruccion.get(0).toString();
             
         }
-//        
-//        String registro = instruccion.get(0).toString();
-//                
-//        if(registro.equals("(") ){
-//            instruccion.remove(0);
-//            while(!registro.equals(")")){
-//                try{
-//                    registro = instruccion.get(0).toString();
-//                    seccion.add(Integer.parseInt(registro));
-//                }
-//                catch(NumberFormatException e){
-//                    seccion.add(registro);
-//                }
-//                catch(Exception e){}
-//                finally{
-//                    instruccion.remove(0);
-//                    getInstruccion(instruccion);
-//                }
-//            }
-//        }
-//        else if (registro.equals(")")){
-//            //
-//            throw new UnsupportedOperationException("Se encontro un operador no valido.");
-//        }
         
-        return seccion;
+               
+        
+        return parser;
     }
 
     
