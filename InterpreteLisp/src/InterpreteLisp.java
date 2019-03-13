@@ -1,6 +1,4 @@
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -13,7 +11,7 @@ import java.util.List;
  */
 public class InterpreteLisp {
     
-    final static String DELIMITADOR = "\n()";
+    final static String DELIMITADOR = " \t\n\r\f";
     
     /**
      * @param args the command line arguments
@@ -38,7 +36,8 @@ public class InterpreteLisp {
                         String path = "";
                         System.out.print("Ingrese el Path del archivo: ");
                         path = Keyboard.readString();
-                        FileManager archivo = new FileManager(path);
+                        DataManager archivo = new DataManager();
+                        archivo.setPathFile(path);
 
                         if(archivo.getExists()){
                             //buildTree(archivo.getCaracterDataFile());
@@ -66,15 +65,15 @@ public class InterpreteLisp {
      */
     public static void runLisp(List instrucciones){
         
-        iLispController controlador = new LispController();
-        if(controlador.verificaSintaxis(instrucciones.get(0).toString().replace(" ",""))){
-            System.out.println("Sintaxis correcta");
-        }
-        else{
-            System.out.println("Contiene simbolos no permitidos");
-        }
+//        iLispController controlador = new LispController();
+//        if(controlador.verificaSintaxis(instrucciones.get(0).toString().replace(" ",""))){
+//            System.out.println("Sintaxis correcta");
+//        }
+//        else{
+//            System.out.println("Contiene simbolos no permitidos");
+//        }
         
-        
+        System.out.println(instrucciones);
         //Evaluamos si contiene instrucciones reservadas del sistema
     }
     

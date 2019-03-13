@@ -1,4 +1,7 @@
 
+import java.util.List;
+
+
 
 /**
  * Interfaz para el controlador de LISP
@@ -13,6 +16,7 @@ public interface iLispController {
      * Metodo para verificar la sintaxis del documento
      * @param instruccion 
      */
-    boolean verificaSintaxis(String instruccion);
+    boolean verificaSinbolos(String instruccion);
     
+    List getInstruccion(List instruccion);
 }

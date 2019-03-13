@@ -15,16 +15,21 @@ import java.util.stream.Collectors;
  * @author pablo
  * @version 01/03/2019
  */
-public class FileManager {
+public class DataManager {
     
     String PATH_FILE = "";
-    final String DELIMITADOR = " \t\n\r\f";
+    
+    
+    
+    public DataManager(){
+        
+    }
     
     /***
      * Constructor utilizado para setear el path del file
      * @param path path de la ruta del archivo
      */
-    public FileManager(String path){
+    public void setPathFile(String path){
         PATH_FILE = path;
     }
     
@@ -83,8 +88,8 @@ public class FileManager {
      * @return Array con los tokens crados, según el delimitador
      */
     public List getTokens(String delimitador){
-               
-        return Collections.list(new StringTokenizer(getDataFile(), delimitador)).stream()
+        
+        return Collections.list(new StringTokenizer(getDataFile().replace("(", " ( ").replace(")", " ) ") , delimitador)).stream()
         .map(token -> (String) token)
         .collect(Collectors.toList());
         

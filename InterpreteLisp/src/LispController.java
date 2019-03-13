@@ -1,3 +1,8 @@
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -31,9 +36,9 @@ public class LispController implements iLispController{
     }
 
     @Override
-    public boolean verificaSintaxis(String instruccion) {
+    public boolean verificaSinbolos(String instruccion) {
         boolean isOK = false;
-        FileManager archivo = new FileManager("");
+        DataManager archivo = new DataManager();
         
         
         for(int control = 0;control<SIMBOLOS_PERMITIDOS.length;control++){
@@ -42,5 +47,32 @@ public class LispController implements iLispController{
         
         return isOK;
     }
+    
+
+    @Override
+    public List getInstruccion(List instruccion) {
+        List seccion = new ArrayList();
+        
+        if(instruccion.get(0).equals("(")){
+            instruccion.remove(0);
+            while(!instruccion.get(0).equals(")")){
+                seccion.add(getInstruccion(instruccion));
+            }
+            
+            instruccion.remove(0);
+            return seccion;
+        }
+        else if (instruccion.equals(")")){
+            //
+        }
+        else{
+            
+        }
+        
+        return seccion;
+    }
+
+    
+    
     
 }
