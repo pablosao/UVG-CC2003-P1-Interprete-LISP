@@ -14,6 +14,7 @@ import java.util.List;
 public class InterpreteLisp {
     
     final static String DELIMITADOR = "\n()";
+    
     /**
      * @param args the command line arguments
      */
@@ -65,8 +66,16 @@ public class InterpreteLisp {
      */
     public static void runLisp(List instrucciones){
         
-        System.out.println(instrucciones);
+        iLispController controlador = new LispController();
+        if(controlador.verificaSintaxis(instrucciones.get(0).toString().replace(" ",""))){
+            System.out.println("Sintaxis correcta");
+        }
+        else{
+            System.out.println("Contiene simbolos no permitidos");
+        }
         
+        
+        //Evaluamos si contiene instrucciones reservadas del sistema
     }
     
 }

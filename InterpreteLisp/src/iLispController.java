@@ -13,6 +13,6 @@ public interface iLispController {
      * Metodo para verificar la sintaxis del documento
      * @param instruccion 
      */
-    void verificaSintaxis(String instruccion);
+    boolean verificaSintaxis(String instruccion);
     
 }

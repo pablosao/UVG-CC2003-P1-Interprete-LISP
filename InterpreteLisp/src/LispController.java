@@ -9,15 +9,38 @@
  * @author pablo
  */
 public class LispController implements iLispController{
-
+    
+    final char[] SIMBOLOS_PERMITIDOS = {
+             '+'
+            ,'-'
+            ,'*'
+            ,'/'
+    };
+    
+    final String[] PALABRAS_RESERVADAS = {
+             "DEFUN"
+            ,"ATOM"
+            ,"LIST"
+            ,"EQUAL"
+            
+    };
+    
     @Override
     public void operacion(String operador) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void verificaSintaxis(String instruccion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean verificaSintaxis(String instruccion) {
+        boolean isOK = false;
+        FileManager archivo = new FileManager("");
+        
+        
+        for(int control = 0;control<SIMBOLOS_PERMITIDOS.length;control++){
+            isOK = archivo.contieneChar(instruccion, SIMBOLOS_PERMITIDOS[control]);
+        }
+        
+        return isOK;
     }
     
 }

@@ -79,29 +79,29 @@ public class FileManager {
     
     /**
      * Retorna ArrayList con los tokens creados
-     * @param parser string a descomponer en tokens
      * @param delimitador delimitador para descomposición de tokens
      * @return Array con los tokens crados, según el delimitador
      */
     public List getTokens(String delimitador){
-        
-//        //Se crea array para almacenar los tokens
-//        List datos = new ArrayList();
-//        
-//        //Se crean los tokens según el delimitador enviado
-//        StringTokenizer token = new StringTokenizer(getDataFile(), delimitador);
-//        
-//        while(token.hasMoreTokens()){
-//            //agregamos al array todos los tokens creados a partir del delimitador
-//            datos.add(token.nextToken());
-//        }
-//        
-//        return datos;
-        
+               
         return Collections.list(new StringTokenizer(getDataFile(), delimitador)).stream()
         .map(token -> (String) token)
         .collect(Collectors.toList());
         
+    }
+    
+    
+    public boolean contieneChar(String datos, char caracter) {
+        //evaluamos si la cadena no tiene caracteres
+        if (datos.length() == 0){
+            //Retornamos falso si esta no contiene caracteres
+            return false;
+        }
+        else{
+            //Evaluamos si la cadena contiene el caracter buscado, de lo contrario se hace 
+            //recursión para seguir buscando en toda la cadena.
+            return datos.charAt(0) == caracter || contieneChar(datos.substring(1), caracter);
+        }
     }
     
 }
