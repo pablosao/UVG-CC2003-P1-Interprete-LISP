@@ -72,8 +72,14 @@ public class InterpreteLisp {
 //        else{
 //            System.out.println("Contiene simbolos no permitidos");
 //        }
+        iLispController controlador = new LispController();
+        try{
+            System.out.println(controlador.getInstruccion(instrucciones));
+        }
+        catch(Exception e){
+            System.out.println(e.toString());
+        }
         
-        System.out.println(instrucciones);
         //Evaluamos si contiene instrucciones reservadas del sistema
     }
     

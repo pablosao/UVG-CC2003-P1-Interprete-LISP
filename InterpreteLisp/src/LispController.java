@@ -53,20 +53,28 @@ public class LispController implements iLispController{
     public List getInstruccion(List instruccion) {
         List seccion = new ArrayList();
         
-        if(instruccion.get(0).equals("(")){
+        String registro = instruccion.get(0).toString();
+                
+        if(registro.equals("(") ){
             instruccion.remove(0);
-            while(!instruccion.get(0).equals(")")){
-                seccion.add(getInstruccion(instruccion));
+            while(!registro.equals(")")){
+                try{
+                    registro = instruccion.get(0).toString();
+                    seccion.add(Integer.parseInt(registro));
+                }
+                catch(NumberFormatException e){
+                    seccion.add(registro);
+                }
+                catch(Exception e){}
+                finally{
+                    instruccion.remove(0);
+                    getInstruccion(instruccion);
+                }
             }
-            
-            instruccion.remove(0);
-            return seccion;
         }
-        else if (instruccion.equals(")")){
+        else if (registro.equals(")")){
             //
-        }
-        else{
-            
+            throw new UnsupportedOperationException("Se encontro un operador no valido.");
         }
         
         return seccion;
