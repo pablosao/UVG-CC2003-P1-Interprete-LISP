@@ -1,6 +1,7 @@
 
 import javax.sound.midi.Soundbank;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 
@@ -77,6 +78,15 @@ public class InterpreteLisp {
     public static void runLisp(Object value) throws Exception{
         //Casteamos el objeto a tipo List y lo asignamos auna variable List
         List instruccion = (List)value;
+        
+        //Evaluar sintaxis
+        
+        //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
+        System.out.println(String.format( "\n\nExpresión a Evaluar: %s\n\n ",(String) instruccion.stream()
+                            .map(n -> String.valueOf(n))
+                            .collect(Collectors.joining("-", "{", "}"))));
+
+        
         ArithmeticCalculator calculator = new ArithmeticCalculator();
         System.out.println("Resultado: " + calculator.calculate(instruccion));
         //Despliegue temporal del parseo de las instrucciones
