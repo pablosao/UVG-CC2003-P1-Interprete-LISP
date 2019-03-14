@@ -2,15 +2,10 @@
 import java.util.HashMap;
 import java.util.Map;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author pablo
+ * @author Pablo Sao
  */
 public class LispController implements iLispController{
 
@@ -18,29 +13,48 @@ public class LispController implements iLispController{
     Map<Object,Object> MAPAS = new HashMap<Object,Object>();
     
     public LispController(iLispController salida, Object[] parametros, Object[] argumentos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.SALIDA = salida;
+        if (parametros != null) {
+            for (int i = 0; i < parametros.length; ++i) {
+                MAPAS.put(parametros[i], argumentos[i]);
+            }
+	}
     }
-
     
     public LispController() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void put(Object key, Object valor) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Object get(Object expresion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean contieneKey(Object key) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this(null, null, null);
     }
     
+    @Override
+    public void put(Object key, Object valores) {
+        MAPAS.put(key, valores);
+    }
+    
+    @Override
+    public Object get(Object expresion) {
+        Object dato = MAPAS.get(expresion);
+	if (dato != null){
+            return dato;
+        }
+	if (SALIDA != null){
+            return SALIDA.get(expresion);
+        }
+            
+	return null;
+    }
+    
+    @Override
+    public boolean contieneKey(Object key) {
+        
+        if (MAPAS.containsKey(key)){
+            return true;
+        }
+        if (SALIDA != null){
+            return SALIDA.contieneKey(key);
+        }
+	
+        return false;
+    }
     
     
 }

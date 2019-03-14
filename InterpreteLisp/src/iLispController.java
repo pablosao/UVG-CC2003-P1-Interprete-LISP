@@ -6,7 +6,7 @@
 public interface iLispController {
        
     
-    void put(Object key,Object valor);
+    void put(Object key,Object valores);
     
     Object get(Object expresion);
     
