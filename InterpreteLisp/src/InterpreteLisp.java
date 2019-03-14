@@ -1,4 +1,5 @@
 
+import javax.sound.midi.Soundbank;
 import java.util.List;
 
 
@@ -76,9 +77,9 @@ public class InterpreteLisp {
     public static void runLisp(Object value) throws Exception{
         //Casteamos el objeto a tipo List y lo asignamos auna variable List
         List instruccion = (List)value;
-        
+        ArithmeticCalculator calculator = new ArithmeticCalculator();
+        System.out.println("Resultado: " + calculator.calculate(instruccion));
         //Despliegue temporal del parseo de las instrucciones
-        System.out.println(instruccion);
     }
     
 }
