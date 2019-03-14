@@ -152,4 +152,15 @@ public class DataManager {
             return getAtom(token);
 	}
     }
+    
+    
+    public Number sumar(List datos){
+        double res = 0.0;
+        
+        for(int control=0;control < datos.size();control++){
+            res = res + (double)datos.get(control);
+        }
+        return res;
+    }
+    
 }
