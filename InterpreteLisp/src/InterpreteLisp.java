@@ -76,20 +76,29 @@ public class InterpreteLisp {
      * @param value objeto con las instrucciones de LISP
      */
     public static void runLisp(Object value) throws Exception{
-        //Casteamos el objeto a tipo List y lo asignamos auna variable List
+        try{
+            //Casteamos el objeto a tipo List y lo asignamos auna variable List
         List instruccion = (List)value;
         
         //Evaluar sintaxis
         
         //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
-        System.out.println(String.format( "\n\nExpresión a Evaluar: %s\n\n ",(String) instruccion.stream()
+        System.out.println(String.format( "\n\nExpresión a Evaluar: %s\n",(String) instruccion.stream()
                             .map(n -> String.valueOf(n))
-                            .collect(Collectors.joining("-", "{", "}"))));
+                            .collect(Collectors.joining(" ", "(", ")")))
+                            .replace(",", " ")
+                            .replace("[", "(")
+                            .replace("]", ")"));
 
         
         ArithmeticCalculator calculator = new ArithmeticCalculator();
         System.out.println("Resultado: " + calculator.calculate(instruccion));
         //Despliegue temporal del parseo de las instrucciones
+        }
+        catch(Exception e){
+            System.out.println("\n\n\tOcurrio un problema al evaluar la expreción. \n\tError: " + e.toString());
+        }
+        
     }
     
 }
