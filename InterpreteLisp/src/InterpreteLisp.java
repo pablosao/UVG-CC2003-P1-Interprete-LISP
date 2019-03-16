@@ -78,27 +78,48 @@ public class InterpreteLisp {
     public static void runLisp(Object value) throws Exception{
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
-        List instruccion = (List)value;
-        
-        //Evaluar sintaxis
-        
-        //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
-        System.out.println(String.format( "\n\nExpresión a Evaluar: %s\n",(String) instruccion.stream()
-                            .map(n -> String.valueOf(n))
-                            .collect(Collectors.joining(" ", "(", ")")))
-                            .replace(",", " ")
-                            .replace("[", "(")
-                            .replace("]", ")"));
+            List instruccion = (List)value;
 
+            //Evaluar sintaxis
+
+            //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
+            System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: %s",(String) instruccion.stream()
+                                .map(n -> String.valueOf(n))
+                                .collect(Collectors.joining(" ", "(", ")")))
+                                .replace(",", " ")
+                                .replace("[", "(")
+                                .replace("]", ")"));
+
+            //Verificamos si contiene la instrucción ATOM
+            if(instruccion.contains("atom")){
+                
+                //Si el tamaño es de 2, la sintaxis de LISP para atom es correcta
+                if(instruccion.size() == 2 ){
+                    //System.out.println("Ejecuta atom");
+                    if( (new functionEvaluation()).isAtom(instruccion.get(1))){
+                        System.out.print("\n\t\tResultado: True\n\n");
+                    }
+                    else{
+                        System.out.print("\n\t\tResultado: NIL\n\n");
+                    }
+                }
+                //de lo contrario salimos de la ejecucion de LISP
+                else{
+                    System.out.println("La función de atom tiene erroes de sintaxis");
+                }
+            }
+            else if(instruccion.contains("defun")){
+
+            }
+            else{
+                ArithmeticCalculator calculator = new ArithmeticCalculator();
+                System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
+                //Despliegue temporal del parseo de las instrucciones
+            }
         
-        ArithmeticCalculator calculator = new ArithmeticCalculator();
-        System.out.println("Resultado: " + calculator.calculate(instruccion));
-        //Despliegue temporal del parseo de las instrucciones
         }
         catch(Exception e){
             System.out.println("\n\n\tOcurrio un problema al evaluar la expreción. \n\tError: " + e.toString());
         }
-        
     }
-    
 }

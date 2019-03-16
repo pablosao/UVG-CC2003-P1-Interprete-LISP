@@ -9,16 +9,14 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
 /**
- *
+ * Clase para el manejo de archivo e información
  * @author Pablo Sao
  * @version 01/03/2019
  */
 public class DataManager {
     
     String PATH_FILE = "";
-    
-    
-    
+
     public DataManager(){
         
     }
