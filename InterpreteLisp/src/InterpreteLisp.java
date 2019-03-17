@@ -79,7 +79,6 @@ public class InterpreteLisp {
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
             List instruccion = (List)value;
-            System.out.println(instruccion);
 
             //Evaluar sintaxis
 
