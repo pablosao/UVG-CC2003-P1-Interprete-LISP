@@ -110,24 +110,24 @@ public class InterpreteLisp {
             }
             else if(instruccion.contains("defun")){
 
-            } else if (instruccion.contains("list")){
+            } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
                 List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
                 System.out.println(list);
-            } else if (instruccion.contains("equal")){
+            } else if (instruccion.contains("equal")){//Compara si dos valores son iguales
                 if( (new functionEvaluation()).isEqual(instruccion.get(1), instruccion.get(2))){
                     System.out.print("\n\t\tResultado: True\n\n");
                 }
                 else{
                     System.out.print("\n\t\tResultado: NIL\n\n");
                 }
-            } else if (instruccion.contains(">")){
+            } else if (instruccion.contains(">")){//Verifica si un valor A es mayor que B
                 if( (new functionEvaluation()).isGreaterThan(instruccion.get(1), instruccion.get(2))){
                     System.out.print("\n\t\tResultado: True\n\n");
                 }
                 else{
                     System.out.print("\n\t\tResultado: NIL\n\n");
                 }
-            } else if (instruccion.contains("<")){
+            } else if (instruccion.contains("<")){//Verifica si un valor A es menor que B
                 if( (new functionEvaluation()).isLessThan(instruccion.get(1), instruccion.get(2))){
                     System.out.print("\n\t\tResultado: True\n\n");
                 }
