@@ -79,6 +79,7 @@ public class InterpreteLisp {
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
             List instruccion = (List)value;
+            System.out.println(instruccion);
 
             //Evaluar sintaxis
 
@@ -115,6 +116,20 @@ public class InterpreteLisp {
                 System.out.println(list);
             } else if (instruccion.contains("equal")){
                 if( (new functionEvaluation()).isEqual(instruccion.get(1), instruccion.get(2))){
+                    System.out.print("\n\t\tResultado: True\n\n");
+                }
+                else{
+                    System.out.print("\n\t\tResultado: NIL\n\n");
+                }
+            } else if (instruccion.contains(">")){
+                if( (new functionEvaluation()).isGreaterThan(instruccion.get(1), instruccion.get(2))){
+                    System.out.print("\n\t\tResultado: True\n\n");
+                }
+                else{
+                    System.out.print("\n\t\tResultado: NIL\n\n");
+                }
+            } else if (instruccion.contains("<")){
+                if( (new functionEvaluation()).isLessThan(instruccion.get(1), instruccion.get(2))){
                     System.out.print("\n\t\tResultado: True\n\n");
                 }
                 else{

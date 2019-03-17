@@ -1,3 +1,5 @@
+import javafx.beans.property.adapter.ReadOnlyJavaBeanBooleanProperty;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,12 +57,31 @@ public class functionEvaluation {
         return false;
     }
 
+    /**
+     * Metodo para hacer una lista
+     * @param values  lista que sera devuelta por el metodo
+     * @return
+     */
     public List<Object> toList(List<Object> values){
         return values;
     }
 
+    /**
+     * Metodo para comparar dos objetos
+     * @param a
+     * @param b
+     * @return
+     */
     public boolean isEqual(Object a, Object b){
         return a.equals(b);
+    }
+
+    public boolean isGreaterThan (Object a, Object b){
+        return (Double.parseDouble(a.toString()) > Double.parseDouble(b.toString()));
+    }
+
+    public boolean isLessThan(Object a, Object b){
+        return (Double.parseDouble(a.toString()) < Double.parseDouble(b.toString()));
     }
     
 }
