@@ -110,8 +110,18 @@ public class InterpreteLisp {
             }
             else if(instruccion.contains("defun")){
 
+            } else if (instruccion.contains("list")){
+                List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
+                System.out.println(list);
+            } else if (instruccion.contains("equal")){
+                if( (new functionEvaluation()).isEqual(instruccion.get(1), instruccion.get(2))){
+                    System.out.print("\n\t\tResultado: True\n\n");
+                }
+                else{
+                    System.out.print("\n\t\tResultado: NIL\n\n");
+                }
             }
-            else{
+            else if (instruccion.contains("+") || instruccion.contains("-") || instruccion.contains("*") || instruccion.contains("/")){
                 ArithmeticCalculator calculator = new ArithmeticCalculator();
                 System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
                 //Despliegue temporal del parseo de las instrucciones

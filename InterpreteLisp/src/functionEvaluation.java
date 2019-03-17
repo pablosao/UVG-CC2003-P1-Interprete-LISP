@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Clase para el manejo de evaluaciones
  * @author Pablo Sao
@@ -50,6 +53,14 @@ public class functionEvaluation {
             }
 	}
         return false;
+    }
+
+    public List<Object> toList(List<Object> values){
+        return values;
+    }
+
+    public boolean isEqual(Object a, Object b){
+        return a.equals(b);
     }
     
 }
