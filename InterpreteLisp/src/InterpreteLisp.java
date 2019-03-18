@@ -51,8 +51,13 @@ public class InterpreteLisp {
                         
                         //Verificamos que exista el archivo
                         if(archivo.getExists()){
+                            //Obteniendo lista de los tokens generados
+                            List instruccion = archivo.getTokens(DELIMITADOR);
+                            
+                            //Mostrandole al usuario la expresión a evaluar
+                            System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: \n\n%s\n",archivo.getDataFile()));
                             //Mediante el objeto instanciado, obtenemos los tokens y parseo de la instruccion en lisp
-                            runLisp(archivo.getInstruccion(archivo.getTokens(DELIMITADOR)));
+                            runLisp(archivo.getInstruccion(instruccion));
                         }
                         else{
                             System.out.println(String.format("\n\t\tEl archivo de la ruta %s no fue encontrado", path));
@@ -83,12 +88,12 @@ public class InterpreteLisp {
             //Evaluar sintaxis
 
             //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
-            System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: %s",(String) instruccion.stream()
-                                .map(n -> String.valueOf(n))
-                                .collect(Collectors.joining(" ", "(", ")")))
-                                .replace(",", " ")
-                                .replace("[", "(")
-                                .replace("]", ")"));
+//            System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: %s",(String) instruccion.stream()
+//                                .map(n -> String.valueOf(n))
+//                                .collect(Collectors.joining(" ", "(", ")")))
+//                                .replace(",", " ")
+//                                .replace("[", "(")
+//                                .replace("]", ")"));
 
             //Verificamos si contiene la instrucción ATOM
             if(instruccion.contains("atom")){

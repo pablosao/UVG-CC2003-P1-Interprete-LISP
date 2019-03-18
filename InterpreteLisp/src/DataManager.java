@@ -127,20 +127,34 @@ public class DataManager {
         
         //Verificamos si el primer valor es ( para realizar el armado de un subarreglo
 	if (token.equals("(")) {
+            
             //Creamos un ArrayList de tipo objeto con el tamaño de la lista 
             List<Object> tempList = new ArrayList<Object>(instruccion.size() - 1);
-            
-            //Loop para llenar el subarreglo hasta encontrar )
-            while (!instruccion.get(0).equals(")")){
-                //recursión para el llenado del sub arreblo
-                tempList.add(getInstruccion(instruccion));
+            try{
+                
+
+                //Loop para llenar el subarreglo hasta encontrar )
+                while (!instruccion.get(0).equals(")")){
+                    //recursión para el llenado del sub arreblo
+                    tempList.add(getInstruccion(instruccion));
+                }
+
+                //removemos el primer valor de la instrucción
+                instruccion.remove(0);
+
+
+                if(instruccion.get(0).equals("(") && instruccion.size() > 1){
+                    tempList.add(getInstruccion(instruccion));
+                }
+
+                //Retornamos el sub arreglo para almacenarlo en la lista.
+                return tempList;
+            }
+            catch(Exception e){
+                //System.out.println(String.format("\n\t\tError: %s",e.toString()));
+                return tempList;
             }
             
-            //removemos el primer valor de la instrucción
-            instruccion.remove(0);
-            
-            //Retornamos el sub arreglo para almacenarlo en la lista.
-            return tempList;
 	} 
         else if (token.equals(")")) {
             throw new Exception("Inconsistencia al encontrar ')' dentro de la instrucción.");
