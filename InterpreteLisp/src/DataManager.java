@@ -186,9 +186,6 @@ public class DataManager {
                        listas.add(tempInstruction);
                         tempInstruction = "";
                    }
-//                   else{
-//                       tempInstruction += caracteres[control];
-//                   }
                 }
                 
             }
