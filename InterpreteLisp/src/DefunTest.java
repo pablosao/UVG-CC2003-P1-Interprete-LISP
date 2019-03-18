@@ -10,12 +10,8 @@ public class DefunTest {
     @Test
     public void executeInstructions() {
         List instructions = new ArrayList();
-        instructions.add("/");
-        List subList = new ArrayList();
-        subList.add("-");
-        subList.add("n");
-        subList.add(1.8);
-        instructions.add(subList);
+        instructions.add("*");
+        instructions.add("n");
         instructions.add("n");
         List variables = new ArrayList();
         variables.add("n");
@@ -27,13 +23,12 @@ public class DefunTest {
 
         List expected = new ArrayList();
 
-
         expected.add("*");
         expected.add(cons);
         expected.add(cons);
 
-        System.out.println(instructions);
-        System.out.println(expected);
+        //System.out.println(instructions);
+        //System.out.println(expected);
 
         assertEquals(instructions, expected);
     }

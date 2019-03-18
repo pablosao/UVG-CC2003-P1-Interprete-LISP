@@ -117,6 +117,8 @@ public class DataManager {
      */
     public Object getInstruccion(List instruccion) throws Exception {
         
+        
+        
         //Verificamos si la lista esta vacía.
         if (instruccion.isEmpty()) {
             throw new IllegalArgumentException("Valor incongruente. La instrucción es invalida.");
@@ -144,14 +146,14 @@ public class DataManager {
 
 
                 if(instruccion.get(0).equals("(") && instruccion.size() > 1){
-                    tempList.add(getInstruccion(instruccion));
+                    getInstruccion(instruccion);
                 }
-
+                
+                //resultado.add(tempList);
                 //Retornamos el sub arreglo para almacenarlo en la lista.
                 return tempList;
             }
             catch(Exception e){
-                //System.out.println(String.format("\n\t\tError: %s",e.toString()));
                 return tempList;
             }
             
@@ -163,16 +165,42 @@ public class DataManager {
             //retornamos el valor con su estructura de datos para almacenarlo en el arreglo
             return getAtom(token);
 	}
+        
     }
     
-    
-    public Number sumar(List datos){
-        double res = 0.0;
+    //
+    public List<Object> getListInstruccion(){
+        String tempInstruction = "";
+        char[] caracteres = (getDataFile().replace("\n","")+"\n").toCharArray();
         
-        for(int control=0;control < datos.size();control++){
-            res = res + (double)datos.get(control);
+        List<Object> listas = new ArrayList<Object>();
+        
+        for(int control = 0; control < caracteres.length;control++){
+            //System.out.println(caracteres[control]);
+            
+            if(caracteres[control] == ')'){
+                tempInstruction += caracteres[control];
+                
+                if(control < (caracteres.length - 2)){
+                   if(caracteres[control + 1] == '('){
+                       listas.add(tempInstruction);
+                        tempInstruction = "";
+                   }
+                }
+                
+            }
+            else if(caracteres[control] == '\n'){
+                listas.add(tempInstruction);
+                tempInstruction = "";
+            }
+            else{
+                tempInstruction += caracteres[control];
+            }
+             
+            
         }
-        return res;
+        
+        return listas;
     }
     
 }

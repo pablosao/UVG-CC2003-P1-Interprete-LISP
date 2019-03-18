@@ -57,6 +57,9 @@ public class InterpreteLisp {
                             
                             //Mostrandole al usuario la expresión a evaluar
                             System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: \n\n%s\n",archivo.getDataFile()));
+                            
+                            System.out.println(archivo.getListInstruccion());
+                            
                             //Mediante el objeto instanciado, obtenemos los tokens y parseo de la instruccion en lisp
                             runLisp(archivo.getInstruccion(instruccion));
                         }
@@ -85,6 +88,9 @@ public class InterpreteLisp {
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
             List instruccion = (List)value;
+            
+            //System.out.println(instruccion);
+            
             List<Defun> deFun = new ArrayList<>();
             //Evaluar sintaxis
 
