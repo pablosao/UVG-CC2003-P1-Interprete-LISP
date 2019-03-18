@@ -153,7 +153,7 @@ public class DataManager {
 
 
                 if(instruccion.get(0).equals("(") && instruccion.size() > 1){
-                    getInstruccion(instruccion);
+                    tempList.add(getInstruccion(instruccion));
                 }
                 
                 //resultado.add(tempList);
