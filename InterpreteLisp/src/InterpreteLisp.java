@@ -1,5 +1,6 @@
 
 import javax.sound.midi.Soundbank;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -84,7 +85,7 @@ public class InterpreteLisp {
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
             List instruccion = (List)value;
-
+            List<Defun> deFun = new ArrayList<>();
             //Evaluar sintaxis
 
             //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
@@ -113,8 +114,9 @@ public class InterpreteLisp {
                     System.out.println("La función de atom tiene erroes de sintaxis");
                 }
             }
-            else if(instruccion.contains("defun")){
-
+            else if(instruccion.contains("defun")){//Crea una funcion
+                Defun newFunc = new Defun(instruccion.get(1).toString(), instruccion.get(2), instruccion.get(3));
+                deFun.add(newFunc);//Agrega la funcion al array de funciones
 
             } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
                 List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
@@ -145,6 +147,12 @@ public class InterpreteLisp {
                 ArithmeticCalculator calculator = new ArithmeticCalculator();
                 System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
                 //Despliegue temporal del parseo de las instrucciones
+            } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
+                for (Defun fun: deFun) {
+                    if (instruccion.contains(fun.getFunName())){
+                        fun.executeInstructions(instruccion.subList(1, instruccion.size()));
+                    }
+                }
             }
         
         }

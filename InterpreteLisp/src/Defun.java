@@ -8,7 +8,9 @@ public class Defun {
     private HashMap<String, Object> variables = new HashMap<>();
     private List<Object> instructions;
 
-    public Defun(String funName, List<String> variables, List instructions){
+    public Defun(String funName, Object vars, Object inst){
+        List<String> variables = (List)vars;
+        List instructions = (List) inst;
         this.funName = funName;
         for (String item: variables){
             this.variables.put(item, null);
@@ -21,6 +23,7 @@ public class Defun {
         HashMap<String, Object> tempVariables = this.variables;
         //System.out.println(tempInstructions);
         if (variables.size() == tempVariables.size()){//verifica si la lista es del tamaño necesario para ejecutar la funcion
+            System.out.println("Entra");
             int i = 0;
             for (String key: tempVariables.keySet()) {
                 tempVariables.replace(key, variables.get(i));
@@ -40,13 +43,18 @@ public class Defun {
                 i++;
             }
 
-            return instructions;
+            System.out.println(tempInstructions);
+            return tempInstructions;
 
         } else {//Si la cantidad de variables es menor no se ejecutara el codigo.
 
         }
 
-        return instructions;
+        return tempInstructions;
+    }
+
+    public String getFunName(){
+        return this.funName;
     }
 
 }
