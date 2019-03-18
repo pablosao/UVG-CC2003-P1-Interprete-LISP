@@ -1,4 +1,5 @@
 import javax.naming.NamingEnumeration;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -49,11 +50,26 @@ public class Defun {
                             tempInstructions.remove(i + 1);
                         }
                     }
+                } else if (tempInstructions.get(i) instanceof ArrayList){
+                    List subInstruction = (List)tempInstructions.get(i);
+                    int j = 0;
+                    while (j < subInstruction.size()){
+                        if ((subInstruction.get(j) instanceof String)){//Toma cada elemento de las instrucciones
+                            for (String key: tempVariables.keySet()) {//Toma cada elemento del map
+                                if (subInstruction.get(j).equals(key)){//Si el elemento de la instruccion es igual a algun Key del mapa lo reemplaza por su Value
+                                    subInstruction.add(j, tempVariables.get(key));
+                                    subInstruction.remove(j + 1);
+                                }
+                            }
+                        }
+                        j++;
+                    }
+                    tempInstructions.add(i, subInstruction);
+                    tempInstructions.remove(i + 1);
                 }
                 i++;
             }
 
-            System.out.println(tempInstructions);
             return tempInstructions;
 
         } else {//Si la cantidad de variables es menor no se ejecutara el codigo.
