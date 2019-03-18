@@ -86,7 +86,7 @@ public class InterpreteLisp {
     public static void runLisp(Object value) throws Exception{
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
-            List instruccion = (List)value;
+            List instruccions = (List)value;
             
             List tempIns = new ArrayList();
             
@@ -96,19 +96,21 @@ public class InterpreteLisp {
             
             
             
-            for(int control=0;control<instruccion.size();control++){
-                tempIns.add(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccion.get(control).toString() )));
+            for(int control=0;control<instruccions.size();control++){
+                tempIns.add(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
             }
-            
-            
-            
-            
-            //System.out.println(instruccion);
-            
-            List<Defun> deFun = new ArrayList<>();
-            //Evaluar sintaxis
 
-            //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
+
+            for (Object i: tempIns) {
+
+                List instruccion = (List)i;
+
+                //System.out.println(instruccion);
+
+                List<Defun> deFun = new ArrayList<>();
+                //Evaluar sintaxis
+
+                //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
 //            System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: %s",(String) instruccion.stream()
 //                                .map(n -> String.valueOf(n))
 //                                .collect(Collectors.joining(" ", "(", ")")))
@@ -116,65 +118,67 @@ public class InterpreteLisp {
 //                                .replace("[", "(")
 //                                .replace("]", ")"));
 
-            //Verificamos si contiene la instrucción ATOM
-            if(instruccion.contains("atom")){
-                
-                //Si el tamaño es de 2, la sintaxis de LISP para atom es correcta
-                if(instruccion.size() == 2 ){
-                    //System.out.println("Ejecuta atom");
-                    if( (new functionEvaluation()).isAtom(instruccion.get(1))){
+                //Verificamos si contiene la instrucción ATOM
+                if(instruccion.contains("atom")){
+
+                    //Si el tamaño es de 2, la sintaxis de LISP para atom es correcta
+                    if(instruccion.size() == 2 ){
+                        //System.out.println("Ejecuta atom");
+                        if( (new functionEvaluation()).isAtom(instruccion.get(1))){
+                            System.out.print("\n\t\tResultado: True\n\n");
+                        }
+                        else{
+                            System.out.print("\n\t\tResultado: NIL\n\n");
+                        }
+                    }
+                    //de lo contrario salimos de la ejecucion de LISP
+                    else{
+                        System.out.println("La función de atom tiene erroes de sintaxis");
+                    }
+                }
+                else if(instruccion.contains("defun")){//Crea una funcion
+                    Defun newFunc = new Defun(instruccion.get(1).toString(), instruccion.get(2), instruccion.get(3));
+                    deFun.add(newFunc);//Agrega la funcion al array de funciones
+
+                } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
+                    List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
+                    System.out.println(list);
+                } else if (instruccion.contains("equal")){//Compara si dos valores son iguales
+                    if( (new functionEvaluation()).isEqual(instruccion.get(1), instruccion.get(2))){
+                        System.out.print("\n\t\tResultado: True\n\n");
+                    }
+                    else{
+                        System.out.print("\n\t\tResultado: NIL\n\n");
+                    }
+                } else if (instruccion.contains(">")){//Verifica si un valor A es mayor que B
+                    if( (new functionEvaluation()).isGreaterThan(instruccion.get(1), instruccion.get(2))){
+                        System.out.print("\n\t\tResultado: True\n\n");
+                    }
+                    else{
+                        System.out.print("\n\t\tResultado: NIL\n\n");
+                    }
+                } else if (instruccion.contains("<")){//Verifica si un valor A es menor que B
+                    if( (new functionEvaluation()).isLessThan(instruccion.get(1), instruccion.get(2))){
                         System.out.print("\n\t\tResultado: True\n\n");
                     }
                     else{
                         System.out.print("\n\t\tResultado: NIL\n\n");
                     }
                 }
-                //de lo contrario salimos de la ejecucion de LISP
-                else{
-                    System.out.println("La función de atom tiene erroes de sintaxis");
-                }
-            }
-            else if(instruccion.contains("defun")){//Crea una funcion
-                Defun newFunc = new Defun(instruccion.get(1).toString(), instruccion.get(2), instruccion.get(3));
-                deFun.add(newFunc);//Agrega la funcion al array de funciones
-
-            } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
-                List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
-                System.out.println(list);
-            } else if (instruccion.contains("equal")){//Compara si dos valores son iguales
-                if( (new functionEvaluation()).isEqual(instruccion.get(1), instruccion.get(2))){
-                    System.out.print("\n\t\tResultado: True\n\n");
-                }
-                else{
-                    System.out.print("\n\t\tResultado: NIL\n\n");
-                }
-            } else if (instruccion.contains(">")){//Verifica si un valor A es mayor que B
-                if( (new functionEvaluation()).isGreaterThan(instruccion.get(1), instruccion.get(2))){
-                    System.out.print("\n\t\tResultado: True\n\n");
-                }
-                else{
-                    System.out.print("\n\t\tResultado: NIL\n\n");
-                }
-            } else if (instruccion.contains("<")){//Verifica si un valor A es menor que B
-                if( (new functionEvaluation()).isLessThan(instruccion.get(1), instruccion.get(2))){
-                    System.out.print("\n\t\tResultado: True\n\n");
-                }
-                else{
-                    System.out.print("\n\t\tResultado: NIL\n\n");
-                }
-            }
-            else if (instruccion.contains("+") || instruccion.contains("-") || instruccion.contains("*") || instruccion.contains("/")){
-                ArithmeticCalculator calculator = new ArithmeticCalculator();
-                System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
-                //Despliegue temporal del parseo de las instrucciones
-            } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
-                for (Defun fun: deFun) {
-                    if (instruccion.contains(fun.getFunName())){
-                        fun.executeInstructions(instruccion.subList(1, instruccion.size()));
+                else if (instruccion.contains("+") || instruccion.contains("-") || instruccion.contains("*") || instruccion.contains("/")){
+                    ArithmeticCalculator calculator = new ArithmeticCalculator();
+                    System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
+                    //Despliegue temporal del parseo de las instrucciones
+                } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
+                    for (Defun fun: deFun) {
+                        if (instruccion.contains(fun.getFunName())){
+                            fun.executeInstructions(instruccion.subList(1, instruccion.size()));
+                        }
                     }
                 }
+
             }
-        
+
         }
         catch(Exception e){
             System.out.println("\n\n\tOcurrio un problema al evaluar la expreción. \n\tError: " + e.toString());
