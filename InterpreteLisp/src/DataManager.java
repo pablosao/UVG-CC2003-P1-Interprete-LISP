@@ -81,6 +81,13 @@ public class DataManager {
         
     }
     
+    public List getTokens(String delimitador,String value){   
+        return Collections.list(new StringTokenizer(value.replaceAll("\\(", " ( ").replaceAll("\\)", " ) ").trim(), delimitador)).stream()
+        .map(token -> (String) token)
+        .collect(Collectors.toList());
+        
+    }
+    
     /**
      * Metodo para Conversión de String al valor en su tipo de dato.
      * @param token string del token 
