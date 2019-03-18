@@ -110,6 +110,7 @@ public class InterpreteLisp {
             }
             else if(instruccion.contains("defun")){
 
+
             } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
                 List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
                 System.out.println(list);
