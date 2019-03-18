@@ -100,14 +100,22 @@ public class InterpreteLisp {
                 tempIns.add(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
             }
 
+            List<Defun> deFun = new ArrayList<>();
 
             for (Object i: tempIns) {
 
-                List instruccion = (List)i;
+                List instruccion = null;
+
+                if(i instanceof ArrayList){
+                    instruccion = (List) i;
+                }
+                else{
+                    instruccion = tempIns;
+                }
+
 
                 //System.out.println(instruccion);
 
-                List<Defun> deFun = new ArrayList<>();
                 //Evaluar sintaxis
 
                 //Al cumplir con la evaluación de la sintaxis mostramos que instrucción se evaluara
@@ -137,9 +145,9 @@ public class InterpreteLisp {
                     }
                 }
                 else if(instruccion.contains("defun")){//Crea una funcion
-                    Defun newFunc = new Defun(instruccion.get(1).toString(), instruccion.get(2), instruccion.get(3));
+                    List subList = (List) instruccion.get(2);
+                    Defun newFunc = new Defun(instruccion.get(1).toString(), subList.get(0), subList.get(1));
                     deFun.add(newFunc);//Agrega la funcion al array de funciones
-
                 } else if (instruccion.contains("list")){//Devuelve una lista con los valores ingresados
                     List<Object> list = new functionEvaluation().toList(instruccion.subList(1, instruccion.size()));
                     System.out.println(list);
@@ -168,11 +176,12 @@ public class InterpreteLisp {
                 else if (instruccion.contains("+") || instruccion.contains("-") || instruccion.contains("*") || instruccion.contains("/")){
                     ArithmeticCalculator calculator = new ArithmeticCalculator();
                     System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
+                    break;
                     //Despliegue temporal del parseo de las instrucciones
                 } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
                     for (Defun fun: deFun) {
                         if (instruccion.contains(fun.getFunName())){
-                            fun.executeInstructions(instruccion.subList(1, instruccion.size()));
+                            runLisp(fun.executeInstructions(instruccion.subList(1, instruccion.size())));
                         }
                     }
                 }

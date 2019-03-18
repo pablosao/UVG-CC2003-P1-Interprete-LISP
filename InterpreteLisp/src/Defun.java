@@ -16,7 +16,15 @@ public class Defun {
      * @param inst Instrucciones de la funcion
      */
     public Defun(String funName, Object vars, Object inst){
-        List<String> variables = (List)vars;
+//        if(vars instanceof String){
+//            List<String> variables = (new ArrayList<String>()).add(vars.toString());
+//        }
+//        else{
+//            List<String> variables = (List)vars;
+//        }
+
+        List<String> variables = new ArrayList<>();
+        variables.add(vars.toString());
         List instructions = (List) inst;
         this.funName = funName;
         for (String item: variables){
@@ -35,6 +43,7 @@ public class Defun {
         HashMap<String, Object> tempVariables = this.variables;//Mapa temporal para almacenar el valor constante de cada variable
         //System.out.println(tempInstructions);
         if (variables.size() == tempVariables.size()){//verifica si la lista es del tamaño necesario para ejecutar la funcion
+            //System.out.println("Entra");
             int i = 0;
             for (String key: tempVariables.keySet()) {//Toma cada elemento del map y le asigna un Value
                 tempVariables.replace(key, variables.get(i));
@@ -69,7 +78,7 @@ public class Defun {
                 }
                 i++;
             }
-
+            //System.out.println(tempInstructions);
             return tempInstructions;
 
         } else {//Si la cantidad de variables es menor no se ejecutara el codigo.
