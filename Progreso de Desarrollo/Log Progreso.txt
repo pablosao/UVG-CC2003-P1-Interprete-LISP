@@ -1,3 +1,38 @@
+commit f0615fd72261fe0a363ea0870aae0b09b109d404
+Merge: 5c25336 bea1cb5
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 23:12:18 2019 -0600
+
+    Merge branch 'master' of https://github.com/psao/UVG-CC2003-P1-Interprete-LISP
+
+commit 5c25336c19d6d352792b252377b8e5609f837b87
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 23:11:56 2019 -0600
+
+    subiendo historial del progreso de desarrollo
+
+ Progreso de Desarrollo/Log Progreso.txt         | 779 ++++++++++++++++++++++++
+ Progreso de Desarrollo/Resumen_Log Progreso.txt |  76 +++
+ 2 files changed, 855 insertions(+)
+
+commit bea1cb507259be24ef6a3e5bfa32a55a6f91fdb5
+Merge: 5e5aaca 8eb3aa4
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 23:10:53 2019 -0600
+
+    Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+
+commit 5e5aaca339c4669dd550668d2a6144c15a77e8aa
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 23:10:45 2019 -0600
+
+    cond
+
+ InterpreteLisp/src/Defun.java              |  1 -
+ InterpreteLisp/src/InterpreteLisp.java     |  5 +++++
+ InterpreteLisp/src/functionEvaluation.java | 30 ++++++++++++++++++++++++++++++
+ 3 files changed, 35 insertions(+), 1 deletion(-)
+
 commit 8eb3aa4397d407c241c566188a7db998822e9cfa
 Author: Pablo Sao <pablo_sao@outlook.com>
 Date:   Mon Mar 18 23:08:34 2019 -0600

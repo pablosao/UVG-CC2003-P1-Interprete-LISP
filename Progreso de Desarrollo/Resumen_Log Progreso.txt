@@ -1,3 +1,7 @@
+Mon Mar 18 23:12:18 2019 -0600 - Pablo Sao: Merge branch 'master' of https://github.com/psao/UVG-CC2003-P1-Interprete-LISP
+Mon Mar 18 23:11:56 2019 -0600 - Pablo Sao: subiendo historial del progreso de desarrollo
+Mon Mar 18 23:10:53 2019 -0600 - Juan De Leon: Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+Mon Mar 18 23:10:45 2019 -0600 - Juan De Leon: cond
 Mon Mar 18 23:08:34 2019 -0600 - Pablo Sao: Create Funcionamiento.mp4
 Mon Mar 18 21:49:28 2019 -0600 - Pablo Sao: subiendo archivos de texto para pruebas realizadas con la sintaxis de LISP
 Mon Mar 18 21:46:22 2019 -0600 - Pablo Sao: Agregando funcionalidad de instrucciones dentro del defun
