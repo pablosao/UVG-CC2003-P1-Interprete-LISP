@@ -1,0 +1,4 @@
+(defun cuadrado(n)
+	(* n n))
+
+(cuadrado 2)

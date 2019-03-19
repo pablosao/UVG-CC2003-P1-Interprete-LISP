@@ -1,0 +1,4 @@
+(defun FTOC(TEMP)
+	(/ 1.8 (- TEMP 32)))
+
+(FTOC 150)
