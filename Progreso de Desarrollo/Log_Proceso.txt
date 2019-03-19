@@ -1,3 +1,58 @@
+commit 219bb22989d76286a7e052dc8212fe2a78e72ab1
+Author: maflodi97 <42972970+maflodi97@users.noreply.github.com>
+Date:   Mon Mar 18 23:30:25 2019 -0600
+
+    Descripción de JCF y razon de uso
+
+ Proyecto 1.pdf | Bin 0 -> 79505 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 64940a25eb8d35125475cd9374fcad4205733466
+Author: maflodi97 <42972970+maflodi97@users.noreply.github.com>
+Date:   Mon Mar 18 23:16:53 2019 -0600
+
+    Delete Diagrama de Clases.dia~
+
+ UML/Diagrama de Clases/Diagrama de Clases.dia~ | Bin 2456 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 663413e928c6b4342be00b4127bf1d6c335a4b69
+Author: maflodi97 <42972970+maflodi97@users.noreply.github.com>
+Date:   Mon Mar 18 23:16:46 2019 -0600
+
+    Delete Diagrama de Clases.png
+
+ UML/Diagrama de Clases/Diagrama de Clases.png | Bin 22888 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 92ef04fd262a8ffd8943c07d0ebcd2aea724d52b
+Author: maflodi97 <42972970+maflodi97@users.noreply.github.com>
+Date:   Mon Mar 18 23:16:35 2019 -0600
+
+    Delete Diagrama de Clases.dia
+
+ UML/Diagrama de Clases/Diagrama de Clases.dia | Bin 2528 -> 0 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4e4c4c6c3254a233e5150bd5637caa25ed12adc3
+Author: maflodi97 <42972970+maflodi97@users.noreply.github.com>
+Date:   Mon Mar 18 23:15:38 2019 -0600
+
+    Último UML
+
+ UML/Diagrama de Clases Proyecto 1.JPG | Bin 0 -> 127402 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 35c3f352b09da27a4b3c4ea95cff660547db9e94
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 23:13:49 2019 -0600
+
+    actualizando progreso de desarrollo
+
+ Progreso de Desarrollo/Log Progreso.txt         | 35 +++++++++++++++++++++++++
+ Progreso de Desarrollo/Resumen_Log Progreso.txt |  4 +++
+ 2 files changed, 39 insertions(+)
+
 commit f0615fd72261fe0a363ea0870aae0b09b109d404
 Merge: 5c25336 bea1cb5
 Author: Pablo Sao <pablo_sao@outlook.com>

@@ -1,3 +1,9 @@
+Mon Mar 18 23:30:25 2019 -0600 - maflodi97: Descripción de JCF y razon de uso
+Mon Mar 18 23:16:53 2019 -0600 - maflodi97: Delete Diagrama de Clases.dia~
+Mon Mar 18 23:16:46 2019 -0600 - maflodi97: Delete Diagrama de Clases.png
+Mon Mar 18 23:16:35 2019 -0600 - maflodi97: Delete Diagrama de Clases.dia
+Mon Mar 18 23:15:38 2019 -0600 - maflodi97: Último UML
+Mon Mar 18 23:13:49 2019 -0600 - Pablo Sao: actualizando progreso de desarrollo
 Mon Mar 18 23:12:18 2019 -0600 - Pablo Sao: Merge branch 'master' of https://github.com/psao/UVG-CC2003-P1-Interprete-LISP
 Mon Mar 18 23:11:56 2019 -0600 - Pablo Sao: subiendo historial del progreso de desarrollo
 Mon Mar 18 23:10:53 2019 -0600 - Juan De Leon: Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
