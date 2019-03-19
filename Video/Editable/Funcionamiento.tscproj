@@ -1,0 +1,177 @@
+{
+  "title" : "",
+  "description" : "",
+  "author" : "",
+  "width" : 1008.0,
+  "height" : 756.0,
+  "version" : "2.0",
+  "editRate" : 30,
+  "authoringClientName" :  {
+    "name" : "Camtasia",
+    "platform" : "Windows",
+    "version" : "18.0"
+  },
+  "sourceBin" : [
+    {
+      "id" : 1,
+      "src" : "C:\\Users\\pablo\\Documents\\Camtasia\\Rec 03-18-19 1.trec",
+      "rect" : [0, 0, 1008, 756],
+      "lastMod" : "20190319T052658",
+      "sourceTracks" : [
+        {
+          "range" : [0, 7],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1008, 756],
+          "sampleRate" : 30,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-18-19 1.trec;"
+        }
+      ]
+    },
+    {
+      "id" : 2,
+      "src" : "C:\\Users\\pablo\\Documents\\Camtasia\\Rec 03-18-19 2.trec",
+      "rect" : [0, 0, 1008, 756],
+      "lastMod" : "20190319T053857",
+      "sourceTracks" : [
+        {
+          "range" : [0, 2251],
+          "type" : 0,
+          "editRate" : 30,
+          "trackRect" : [0, 0, 1008, 756],
+          "sampleRate" : 29,
+          "bitDepth" : 0,
+          "numChannels" : 0,
+          "metaData" : "Rec 03-18-19 2.trec;"
+        }
+      ]
+    }
+  ],
+  "timeline" : {
+    "id" : 3,
+    "sceneTrack" : {
+      "scenes" : [
+        {
+          "duration" : 75.0333333333333,
+          "title" : "",
+          "type" : "",
+          "csml" : {
+            "tracks" : [
+              {
+                "trackIndex" : 0,
+                "medias" : [
+                  {
+                    "id" : 4,
+                    "_type" : "ScreenVMFile",
+                    "src" : 2,
+                    "trackNumber" : 0,
+                    "attributes" : {
+                      "ident" : "Rec 03-18-19 2"
+                    },
+                    "parameters" : {
+                      "cursorScale" : {
+                        "type" : "double",
+                        "defaultValue" : 1.0,
+                        "interp" : "linr"
+                      },
+                      "cursorOpacity" : {
+                        "type" : "double",
+                        "defaultValue" : 1.0,
+                        "interp" : "linr"
+                      }
+                    },
+                    "effects" : [
+                        {
+                          "effectName" : "CursorHilight",
+                          "category" : "categoryCursorEffects",
+                          "parameters" : {
+                            "blur" : 0.1,
+                            "color-alpha" : 0.75,
+                            "color-blue" : 0.0,
+                            "color-green" : 1.0,
+                            "color-red" : 1.0,
+                            "radius" : 50.0
+                          }
+                        }
+                    ],
+                    "start" : 0,
+                    "duration" : 2251,
+                    "mediaStart" : 0,
+                    "mediaDuration" : 2251,
+                    "scalar" : 1,
+                    "metadata" : {
+                      "AutoAppliedSmartFocus" : "False",
+                      "WinSubProjectDisplayName" : "",
+                      "clipSpeedAttribute" : false
+                    },
+                    "animationTracks" : {
+
+                    }
+                  }
+                ]
+              },
+              {
+                "trackIndex" : 1,
+                "medias" : [
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "trackAttributes" : [
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      },
+      {
+        "ident" : "",
+        "audioMuted" : false,
+        "videoHidden" : false,
+        "metadata" : {
+          "IsLocked" : "False",
+          "WinTrackHeight" : "56"
+        }
+      }
+    ],
+    "captionAttributes" : {
+      "enabled" : true,
+      "fontName" : "Arial",
+      "fontSize" : 37,
+      "backgroundColor" : [ 0, 0, 0, 191],
+      "foregroundColor" : [ 255, 255, 255, 255],
+      "lang" : "en",
+      "alignment" : 0,
+      "defaultFontSize" : true,
+      "opacity" : 0.5,
+      "backgroundEnabled" : true,
+      "backgroundOnlyAroundText" : true
+    },
+    "backgroundColor" : [ 0, 0, 0, 255]
+  },
+  "metadata" : {
+    "AutoSaveFile" : "C:\\Users\\pablo\\AppData\\Local\\TechSmith\\Camtasia Studio\\18.0\\Auto-Saves\\Untitled Projectcf9eb2.autosave.tscproj",
+    "CanvasZoom" : 84,
+    "Date" : "2019-03-18 11:00:06 PM",
+    "IsAutoSave" : "0",
+    "Language" : "ENU",
+    "ProfileName" : "MP4 only (up to 720p)",
+    "ProjectDimensionsChanged" : "1",
+    "Title" : "Funcionamiento",
+    "audioNarrationNotes" : "",
+    "calloutStyle" : "Basic",
+    "canvasDetached" : "False",
+    "canvasPositionHeight" : "0",
+    "canvasPositionLeft" : "0",
+    "canvasPositionTop" : "0",
+    "canvasPositionWidth" : "0"
+  }
+}
