@@ -84,14 +84,12 @@ public class functionEvaluation {
         return (Double.parseDouble(a.toString()) < Double.parseDouble(b.toString()));
     }
 
-    public Object cond(List instructions){
+    public Object cond(List instructions){//Cond
         List subList = instructions.subList(1, instructions.size());
+        List subList2 = (List) subList.get(0);
         int i = 0;
-        System.out.println(subList);
-        for (Object inst: subList) {
-            List subList2 = (List)inst;
-            List instruccion = (List) subList2.get(i);
-            System.out.println(instruccion);
+        for (Object inst: subList2) {
+            List instruccion = (List)inst;
             if (instruccion.contains("equal")){
                 if (isEqual(instruccion.get(1), instruccion.get(2))){
                     return instruccion.get(3);
@@ -104,11 +102,9 @@ public class functionEvaluation {
                 if (isGreaterThan(instruccion.get(1), instruccion.get(2))){
                     return instruccion.get(3);
                 }
-            } else if (i == ((List) inst).size()){
-                System.out.println(subList.get(i));
-                return subList.get(i);
+            } else if (i == subList2.size()){
+                return subList2.get(i);
             }
-            System.out.println("sale");
             i++;
         }
         return null;
