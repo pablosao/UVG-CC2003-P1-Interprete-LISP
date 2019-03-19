@@ -38,7 +38,7 @@ public class Defun {
      * @param variables lista con las variables de la funcion
      * @return Devuelve la instruccion con las variables modificadas como constantes
      */
-    public List executeInstructions(List variables){
+    public List<Object> executeInstructions(List variables){
         List tempInstructions = this.instructions;
         HashMap<String, Object> tempVariables = this.variables;//Mapa temporal para almacenar el valor constante de cada variable
         //System.out.println(tempInstructions);

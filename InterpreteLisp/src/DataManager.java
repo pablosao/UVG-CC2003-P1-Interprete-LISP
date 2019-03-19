@@ -75,16 +75,24 @@ public class DataManager {
      */
     public List getTokens(String delimitador){
         
-        return Collections.list(new StringTokenizer(getDataFile().replaceAll("\\(", " ( ").replaceAll("\\)", " ) ").trim(), delimitador)).stream()
+        return Collections.list(new StringTokenizer(getDataFile().replaceAll("[", "").replaceAll("]", "").replaceAll("\\(", " ( ").replaceAll("\\)", " ) ").trim(), delimitador)).stream()
         .map(token -> (String) token)
         .collect(Collectors.toList());
         
     }
     
-    public List getTokens(String delimitador,String value){   
-        return Collections.list(new StringTokenizer(value.replaceAll("\\(", " ( ").replaceAll("\\)", " ) ").trim(), delimitador)).stream()
-        .map(token -> (String) token)
-        .collect(Collectors.toList());
+    /**
+     * Metodo para obtener el parseo de la instrucción enviada por medio del delimitador enviado
+     * @param delimitador String para parseo de dato
+     * @param value dato a parsear con el delimitador deseado
+     * @return lista de la instrucción parseada
+     */
+    public List getTokens(String delimitador,String value){
+        String tempValue = value.replaceAll("\\,", " ").replaceAll("\\[", "(").replaceAll("\\]", ")");
+        List tempList = Collections.list(new StringTokenizer(tempValue.replaceAll("\\(", " ( ").replaceAll("\\)", " ) ").trim(), delimitador)).stream()
+            .map(token -> (String) token)
+            .collect(Collectors.toList());
+        return tempList;
         
     }
     

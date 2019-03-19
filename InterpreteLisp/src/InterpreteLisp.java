@@ -54,13 +54,14 @@ public class InterpreteLisp {
                         //Verificamos que exista el archivo
                         if(archivo.getExists()){
                             //Obteniendo lista de los tokens generados
-                            List instruccion = archivo.getTokens(DELIMITADOR);
+//                            List instruccion = archivo.getTokens(DELIMITADOR);
                             
                             //Mostrandole al usuario la expresión a evaluar
                             System.out.println(String.format( "\n\n\t\tExpresión a Evaluar: \n\n%s\n",archivo.getDataFile()));
                             
                             //Mediante el objeto instanciado, obtenemos los tokens y parseo de la instruccion en lisp
                             //runLisp(archivo.getInstruccion(instruccion));
+                            
                             runLisp(archivo.getListInstruccion());
                         }
                         else{
@@ -88,7 +89,7 @@ public class InterpreteLisp {
         try{
             //Casteamos el objeto a tipo List y lo asignamos auna variable List
             List instruccions = (List)value;
-            
+                        
             List tempIns = new ArrayList();
             
             
@@ -98,7 +99,6 @@ public class InterpreteLisp {
             
             
             for(int control=0;control<instruccions.size();control++){
-                System.out.println(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
                 tempIns.add(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
                 
             }
@@ -188,7 +188,13 @@ public class InterpreteLisp {
                 } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
                     for (Defun fun: deFun) {
                         if (instruccion.contains(fun.getFunName())){
-                            runLisp(fun.executeInstructions(instruccion.subList(1, instruccion.size())));
+                            List<Object> tempSubIns = fun.executeInstructions(instruccion.subList(1, instruccion.size()));
+                            
+                            String sub_instruccion = String.format("(%s)", listToString(tempSubIns));
+                            
+                            //System.out.println( archivo.getInstruccion(archivo.getTokens( DELIMITADOR , sub_instruccion )) );
+                            runLisp( archivo.getInstruccion(archivo.getTokens( DELIMITADOR , sub_instruccion )) );
+                            //runLisp(archivo.getInstruccion(archivo.getTokens( DELIMITADOR , tempSIns )));
                         }
                     }
                 }
@@ -199,5 +205,33 @@ public class InterpreteLisp {
         catch(Exception e){
             System.out.println("\n\n\tOcurrio un problema al evaluar la expreción. \n\tError: " + e.toString());
         }
+    }
+    
+    /**
+     * Metodo para convertir la instrucción LISP de una lista a String
+     * @param value Lista de la instrucccion que se desea convertir
+     * @return La instrucción en String
+     */
+    public static String listToString(List value){
+        String tempSIns ="";
+        
+        List tempList = (List)value;
+        for(int control = 0;control<tempList.size(); control++){
+            
+//        }
+//        for (Object s : value)
+//        {
+            if(tempList.get(control) instanceof List){
+                tempSIns += "(";
+                tempSIns += listToString((List)tempList.get(control)) + "\t";
+                tempSIns += ")";
+            }
+            else{
+                tempSIns += tempList.get(control) + "\t";
+            }
+            
+        }
+        
+        return tempSIns;
     }
 }
