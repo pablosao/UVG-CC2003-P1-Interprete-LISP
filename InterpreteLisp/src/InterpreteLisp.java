@@ -134,6 +134,7 @@ public class InterpreteLisp {
 //                                .replace("]", ")"));
 
                 //Verificamos si contiene la instrucción ATOM
+                //System.out.println(instruccion);
                 if(instruccion.contains("atom")){
 
                     //Si el tamaño es de 2, la sintaxis de LISP para atom es correcta
@@ -185,6 +186,10 @@ public class InterpreteLisp {
                     System.out.println("\n\t\tResultado: " + calculator.calculate(instruccion));
                     break;
                     //Despliegue temporal del parseo de las instrucciones
+                } else if (instruccion.contains("cond")){
+
+                    runLisp((new functionEvaluation()).cond(instruccion));
+
                 } else {//Si no es ninguno de los casos anteriores revisa dentro de un array que contiene todas las definiciones de funciones
                     for (Defun fun: deFun) {
                         if (instruccion.contains(fun.getFunName())){

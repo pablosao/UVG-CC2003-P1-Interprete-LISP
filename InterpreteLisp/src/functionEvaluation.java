@@ -83,5 +83,35 @@ public class functionEvaluation {
     public boolean isLessThan(Object a, Object b){
         return (Double.parseDouble(a.toString()) < Double.parseDouble(b.toString()));
     }
+
+    public Object cond(List instructions){
+        List subList = instructions.subList(1, instructions.size());
+        int i = 0;
+        System.out.println(subList);
+        for (Object inst: subList) {
+            List subList2 = (List)inst;
+            List instruccion = (List) subList2.get(i);
+            System.out.println(instruccion);
+            if (instruccion.contains("equal")){
+                if (isEqual(instruccion.get(1), instruccion.get(2))){
+                    return instruccion.get(3);
+                }
+            } else if (instruccion.contains("<")){
+                if (isLessThan(instruccion.get(1), instruccion.get(2))){
+                    return instruccion.get(3);
+                }
+            } else if (instruccion.contains(">")){
+                if (isGreaterThan(instruccion.get(1), instruccion.get(2))){
+                    return instruccion.get(3);
+                }
+            } else if (i == ((List) inst).size()){
+                System.out.println(subList.get(i));
+                return subList.get(i);
+            }
+            System.out.println("sale");
+            i++;
+        }
+        return null;
+    }
     
 }

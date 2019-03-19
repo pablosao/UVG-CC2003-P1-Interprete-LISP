@@ -78,7 +78,6 @@ public class Defun {
                 }
                 i++;
             }
-            //System.out.println(tempInstructions);
             return tempInstructions;
 
         } else {//Si la cantidad de variables es menor no se ejecutara el codigo.
