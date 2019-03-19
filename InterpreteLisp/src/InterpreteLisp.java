@@ -1,6 +1,7 @@
 
 import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -97,7 +98,9 @@ public class InterpreteLisp {
             
             
             for(int control=0;control<instruccions.size();control++){
+                System.out.println(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
                 tempIns.add(archivo.getInstruccion(archivo.getTokens(DELIMITADOR, instruccions.get(control).toString() )));
+                
             }
 
             List<Defun> deFun = new ArrayList<>();
@@ -105,12 +108,16 @@ public class InterpreteLisp {
             for (Object i: tempIns) {
 
                 List instruccion = null;
-
+                //System.out.print(i.getClass().getSimpleName());
                 if(i instanceof ArrayList){
                     instruccion = (List) i;
                 }
+                else if(i instanceof String){
+                    instruccion = Arrays.asList(tempIns.toString().split(" "));
+                   
+                }
                 else{
-                    instruccion = tempIns;
+                     instruccion = tempIns;
                 }
 
 
