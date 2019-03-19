@@ -1,0 +1,779 @@
+commit 8eb3aa4397d407c241c566188a7db998822e9cfa
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 23:08:34 2019 -0600
+
+    Create Funcionamiento.mp4
+    
+    Video básico del funcionamiento
+
+ Video/Funcionamiento.mp4 | Bin 0 -> 1203359 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 137ca56b18fce4102c555bd4a5fc0682e10d7de4
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 21:49:28 2019 -0600
+
+    subiendo archivos de texto para pruebas realizadas con la sintaxis de LISP
+
+ TXT ejemplos LISP/dato1.txt | 4 ++++
+ TXT ejemplos LISP/dato2.txt | 4 ++++
+ TXT ejemplos LISP/dato3.txt | 1 +
+ 3 files changed, 9 insertions(+)
+
+commit 3289259577bfe5f6e08c90562d4ae0d66c787025
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 21:46:22 2019 -0600
+
+    Agregando funcionalidad de instrucciones dentro del defun
+
+ InterpreteLisp/src/DataManager.java    |  18 +++-
+ InterpreteLisp/src/Defun.java          | 192 ++++++++++++++++-----------------
+ InterpreteLisp/src/InterpreteLisp.java |  42 +++++++-
+ 3 files changed, 147 insertions(+), 105 deletions(-)
+
+commit bbd66a240993a9daa1c00f2440a5ca60dcdd9683
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 19:17:05 2019 -0600
+
+    Update InterpreteLisp.java
+    
+    agregando instanceof String en condición inicial
+
+ InterpreteLisp/src/InterpreteLisp.java | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+commit 79f2e02046f012324b7baaf2a35632012343c0c7
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 18:20:19 2019 -0600
+
+    Delete OperationTree.java
+    
+    clase no utilizada dentro del proyecto
+
+ InterpreteLisp/src/OperationTree.java | 17 -----------------
+ 1 file changed, 17 deletions(-)
+
+commit 6fff19c950ae1816766c775afe15d96d4abb6786
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 18:06:35 2019 -0600
+
+    Eliminando clases que no se utilizan, se comenta el de test.
+
+ InterpreteLisp/src/DefunTest.java       | 68 ++++++++++++++++-----------------
+ InterpreteLisp/src/LispController.java  | 60 -----------------------------
+ InterpreteLisp/src/iLispController.java | 15 --------
+ 3 files changed, 34 insertions(+), 109 deletions(-)
+
+commit f900357d232fde8b976856be651ddf08744b5a8d
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 13:54:05 2019 -0600
+
+    Se ajusta para la ejecucion de la instruccion dentro de un defun -psao
+
+ InterpreteLisp/src/Defun.java          | 13 +++++++++++--
+ InterpreteLisp/src/InterpreteLisp.java | 19 ++++++++++++++-----
+ 2 files changed, 25 insertions(+), 7 deletions(-)
+
+commit 05b4fb8f99c3efddef37890694eb290728e647b7
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 11:42:19 2019 -0600
+
+    Update DataManager.java
+    
+    Arreglando adicionamiento de sublista en el arreglo
+
+ InterpreteLisp/src/DataManager.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 7abc75a1e12d7bc6822f1007e3f9acc4331f96f3
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 11:22:16 2019 -0600
+
+    Instrucciones
+
+ InterpreteLisp/src/InterpreteLisp.java | 128 +++++++++++++++++----------------
+ 1 file changed, 66 insertions(+), 62 deletions(-)
+
+commit c1aa1fabdd35a0aecdd50a67079f52d198c24067
+Merge: 7b2c736 456f774
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 11:16:50 2019 -0600
+
+    Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+
+commit 7b2c7368c31a756565283e76ed6c91a4a8d0b899
+Merge: 1e94e20 2a1ee0c
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 11:16:42 2019 -0600
+
+    Test
+
+commit 456f77461f9e83d72f5edf7a294e389915344030
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 11:13:53 2019 -0600
+
+    Update DefunTest.java
+
+ InterpreteLisp/src/DefunTest.java | 58 +++++++++++++++++++--------------------
+ 1 file changed, 29 insertions(+), 29 deletions(-)
+
+commit a28b938b2787d6ae246e6891e33e27493351af84
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 11:12:22 2019 -0600
+
+    Subiendo division de instrucciones
+
+ InterpreteLisp/src/DataManager.java    |  7 +++++++
+ InterpreteLisp/src/InterpreteLisp.java | 20 +++++++++++++++++---
+ 2 files changed, 24 insertions(+), 3 deletions(-)
+
+commit 1e94e206ba448910060e35cac2ac1810a0340033
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Mon Mar 18 11:01:23 2019 -0600
+
+    Correcciones Defun
+
+ InterpreteLisp/src/Defun.java     | 18 +++++++++++++++++-
+ InterpreteLisp/src/DefunTest.java | 13 +++++++++----
+ 2 files changed, 26 insertions(+), 5 deletions(-)
+
+commit 2a1ee0c495b85292195f381b0f7f1382d9060284
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 10:49:46 2019 -0600
+
+    Update DataManager.java
+
+ InterpreteLisp/src/DataManager.java | 3 ---
+ 1 file changed, 3 deletions(-)
+
+commit 698df553b212ab62afe88aee4b33fba983895cdf
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 18 10:45:15 2019 -0600
+
+    Incorporanndo funcionamiento de separación de instrucciones
+    
+    Se agrega nuevo método para identificar instrucciones
+
+ InterpreteLisp/src/DataManager.java    | 49 ++++++++++++++++++++++------
+ InterpreteLisp/src/DefunTest.java      | 58 +++++++++++++++++-----------------
+ InterpreteLisp/src/InterpreteLisp.java |  6 ++++
+ 3 files changed, 75 insertions(+), 38 deletions(-)
+
+commit 55edaf398fbadafa379b6f21f7e4d2e75245aaa6
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 19:55:20 2019 -0600
+
+    Comentarios
+
+ InterpreteLisp/src/Defun.java | 22 ++++++++++++++++------
+ 1 file changed, 16 insertions(+), 6 deletions(-)
+
+commit ec3fa167668e79e5d579d8bd51f64a5ba17c4178
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 19:45:50 2019 -0600
+
+    Cambios
+
+ InterpreteLisp/src/Defun.java          | 14 +++++++++++---
+ InterpreteLisp/src/InterpreteLisp.java | 14 +++++++++++---
+ 2 files changed, 22 insertions(+), 6 deletions(-)
+
+commit 57482950b2b1d5ed1c00bceaa8d029d8e97ec285
+Merge: d35a6f1 8f5ff32
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 19:08:33 2019 -0600
+
+    Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+
+commit d35a6f12d9e0e101b6ad5e32cbafbfc3030ecbcb
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 19:08:24 2019 -0600
+
+    Defun Instructions
+
+ InterpreteLisp/src/Defun.java          | 42 +++++++++++++++++++++++++++++-----
+ InterpreteLisp/src/DefunTest.java      | 35 ++++++++++++++++++++++++++++
+ InterpreteLisp/src/InterpreteLisp.java |  1 +
+ 3 files changed, 72 insertions(+), 6 deletions(-)
+
+commit 8f5ff3271dd966aceb85180952a9cd896dd72deb
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Mar 17 18:08:26 2019 -0600
+
+    Componiendo parseo de instrucciones de LISP, relacionado al bug: https://github.com/psao/UVG-CC2003-P1-Interprete-LISP/issues/1
+
+ InterpreteLisp/src/DataManager.java    | 34 ++++++++++++++++++++++++----------
+ InterpreteLisp/src/InterpreteLisp.java | 19 ++++++++++++-------
+ 2 files changed, 36 insertions(+), 17 deletions(-)
+
+commit 05ac2e05770697b49103d16454217eb0daab741c
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 16:59:32 2019 -0600
+
+    Comentarios
+
+ InterpreteLisp/src/Defun.java          | 6 +++---
+ InterpreteLisp/src/InterpreteLisp.java | 8 ++++----
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 355a9d6c7a7e058075ddaa6f64585892bc652d41
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 16:49:07 2019 -0600
+
+    Defun
+
+ InterpreteLisp/src/Defun.java          | 20 ++++++++++++++++++++
+ InterpreteLisp/src/InterpreteLisp.java |  1 -
+ 2 files changed, 20 insertions(+), 1 deletion(-)
+
+commit b2cfeaee7048295475d43a84355d4d763b558c15
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 11:50:32 2019 -0600
+
+    Comparadores mayor y menor que
+
+ InterpreteLisp/src/Defun.java              |  3 +++
+ InterpreteLisp/src/InterpreteLisp.java     | 15 +++++++++++++++
+ InterpreteLisp/src/functionEvaluation.java | 21 +++++++++++++++++++++
+ 3 files changed, 39 insertions(+)
+
+commit 7da263a4d3f29cbc7fe43b7900bae4cb6e06b84a
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Sun Mar 17 11:13:44 2019 -0600
+
+    List and equal implemented
+
+ InterpreteLisp/src/InterpreteLisp.java     | 12 +++++++++++-
+ InterpreteLisp/src/functionEvaluation.java | 11 +++++++++++
+ 2 files changed, 22 insertions(+), 1 deletion(-)
+
+commit 8a112a2d5589149f0396d88fa5b0db2cca7d8fff
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 15 22:07:18 2019 -0600
+
+    Se agrega función de atom y se incorpora al metodo que ejecuta la instrucción de LISP
+
+ InterpreteLisp/src/DataManager.java        |  6 ++--
+ InterpreteLisp/src/InterpreteLisp.java     | 53 +++++++++++++++++++---------
+ InterpreteLisp/src/functionEvaluation.java | 55 ++++++++++++++++++++++++++++++
+ 3 files changed, 94 insertions(+), 20 deletions(-)
+
+commit 7913f2b2e1c0b7f810a1d7580c24f5203f628421
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 15 11:40:58 2019 -0600
+
+    Clase completada, limpiando código y comentando
+
+ InterpreteLisp/src/ArithmeticCalculator.java | 74 +++++++++++++++++++++-------
+ 1 file changed, 55 insertions(+), 19 deletions(-)
+
+commit fdc5d09240d33d373d2dee4962c64d617e4d8427
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 15 11:31:24 2019 -0600
+
+    Corrigiendo para operación aritmetica recursiva por medio de stack
+
+ InterpreteLisp/src/ArithmeticCalculator.java | 164 ++++++++++-----------------
+ 1 file changed, 62 insertions(+), 102 deletions(-)
+
+commit 00be082ebf8945e8bad10b8c44f264bc4ae1f177
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 15 09:27:31 2019 -0600
+
+    Componiendo para que sume más de 2 números
+
+ InterpreteLisp/src/ArithmeticCalculator.java | 251 +++++++++++++++------------
+ 1 file changed, 143 insertions(+), 108 deletions(-)
+
+commit a04f8b6ac6d24eb88da9aca8e16aaa5b8a649eda
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Thu Mar 14 15:13:45 2019 -0600
+
+    Agregando manejo de errores
+
+ InterpreteLisp/src/InterpreteLisp.java | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+
+commit 042b4caf460da052744dbc405b4d28bf200fe4f7
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Thu Mar 14 15:00:41 2019 -0600
+
+    Se agrega el despliegue en la terminal de la instrucción a evaluar
+
+ InterpreteLisp/src/InterpreteLisp.java | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+commit 242b92e1c39999fe32aca344e98f0d9d41b4fc23
+Author: Juan De Leon <dele17822@uvg.edu.gt>
+Date:   Thu Mar 14 14:47:12 2019 -0600
+
+    Arithmetic calculator
+
+ .idea/vcs.xml                                |   6 ++
+ InterpreteLisp/.idea/vcs.xml                 |   6 ++
+ InterpreteLisp/src/ArithmeticCalculator.java | 108 +++++++++++++++++++++++++++
+ InterpreteLisp/src/InterpreteLisp.java       |   5 +-
+ 4 files changed, 123 insertions(+), 2 deletions(-)
+
+commit db677be08737b6c6a8d4f47dd48d87c3ebda6950
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Thu Mar 14 07:59:01 2019 -0600
+
+    Update DataManager.java
+    
+    se agrega metodo para sumar registros.
+
+ InterpreteLisp/src/DataManager.java | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+commit de63b23af72145dc5cf1084c4805edb4e10de3eb
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 18:45:16 2019 -0600
+
+    Update README.md
+    
+    Se agregan referencias consultadas para la elaboración de este proyecto
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit d473decd81a7cb98a80fe38fcb813bc3e7527a44
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 18:32:39 2019 -0600
+
+    Parseo del lenguaje terminado. Se almacena la sintaxis en un conjunto de arreglos, según la estructura de los parentesis.
+
+ InterpreteLisp/src/DataManager.java     | 44 ++++++++++++++++++++++--------
+ InterpreteLisp/src/InterpreteLisp.java  | 29 ++++++++++++++------
+ InterpreteLisp/src/LispController.java  | 48 +++++++++++++++++++++------------
+ InterpreteLisp/src/iLispController.java |  2 +-
+ 4 files changed, 86 insertions(+), 37 deletions(-)
+
+commit fbd41f073d1487a0405c25f62be57e69e3110cd3
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 17:34:59 2019 -0600
+
+    Corrigiendo parser de la instrucción, mediante recursión de un método de objetos
+
+ InterpreteLisp/src/DataManager.java     | 67 +++++++++++++++++++----------
+ InterpreteLisp/src/InterpreteLisp.java  | 14 +-----
+ InterpreteLisp/src/LispController.java  | 76 ++++++++-------------------------
+ InterpreteLisp/src/iLispController.java | 17 +++-----
+ 4 files changed, 68 insertions(+), 106 deletions(-)
+
+commit 4132f1980f707939a08e6a55ea2cb7e3969b3770
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 16:00:24 2019 -0600
+
+    Subierndo parseo de la instrucción
+
+ InterpreteLisp/src/InterpreteLisp.java |  4 +--
+ InterpreteLisp/src/LispController.java | 65 +++++++++++++++-------------------
+ 2 files changed, 31 insertions(+), 38 deletions(-)
+
+commit 75606906083294460c93b7adfd9862ead4d2e0e8
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 10:13:11 2019 -0600
+
+    subiendo cambios en getInstruccion
+
+ InterpreteLisp/src/InterpreteLisp.java | 17 ++++++-----------
+ InterpreteLisp/src/LispController.java | 17 +++++++++++++++++
+ 2 files changed, 23 insertions(+), 11 deletions(-)
+
+commit 0cd7a8b85a1094cff7acae33b50eb1d0abc97946
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 09:35:11 2019 -0600
+
+    Se comenta partes pendientes para evitar problemas de ejecución
+
+ InterpreteLisp/src/LispController.java | 58 +++++++++++++++-------------------
+ 1 file changed, 25 insertions(+), 33 deletions(-)
+
+commit da4520a62baeb7fb84ef3d801d4f35cfff430ca3
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 09:33:32 2019 -0600
+
+    Queda pendiente componer el parseo de la instrucción, actualmente da error
+
+ InterpreteLisp/src/InterpreteLisp.java |  8 +++++++-
+ InterpreteLisp/src/LispController.java | 28 ++++++++++++++++++----------
+ 2 files changed, 25 insertions(+), 11 deletions(-)
+
+commit 972ebb9853fca58ef6f036f54ef551e589581cd8
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Wed Mar 13 00:31:30 2019 -0600
+
+    Subiendo metodo para obtener el arreglo de las instrucciones
+
+ .../src/{FileManager.java => DataManager.java}     | 15 ++++++---
+ InterpreteLisp/src/InterpreteLisp.java             | 23 +++++++-------
+ InterpreteLisp/src/LispController.java             | 36 ++++++++++++++++++++--
+ InterpreteLisp/src/iLispController.java            |  6 +++-
+ 4 files changed, 60 insertions(+), 20 deletions(-)
+
+commit a32373dfdbc29de3e178768ec56860722ab5f6cb
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Tue Mar 12 23:56:20 2019 -0600
+
+    se agrega metodo para corroborar que solo se ingresen signos permitidos, y hay que componer logica del manejo de esta validación en el LispController
+
+ InterpreteLisp/src/FileManager.java     | 30 +++++++++++++++---------------
+ InterpreteLisp/src/InterpreteLisp.java  | 11 ++++++++++-
+ InterpreteLisp/src/LispController.java  | 29 ++++++++++++++++++++++++++---
+ InterpreteLisp/src/iLispController.java |  2 +-
+ 4 files changed, 52 insertions(+), 20 deletions(-)
+
+commit ecab5030981d422a512d6e18510f3605edf91885
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Tue Mar 12 22:39:05 2019 -0600
+
+    Componiendo problema al retornar lista, se agrega manejo de erroes en el menu
+
+ InterpreteLisp/src/FileManager.java    | 31 +++++++++------
+ InterpreteLisp/src/InterpreteLisp.java | 70 ++++++++++++++++++++--------------
+ 2 files changed, 60 insertions(+), 41 deletions(-)
+
+commit 956da41ec83716c8f6fa9e709b541ac1053bb45e
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Mar 10 09:34:05 2019 -0600
+
+    Creando métodos para manejo de parseo
+
+ InterpreteLisp/src/FileManager.java    | 44 +++++++++++++++++++++++++++-------
+ InterpreteLisp/src/InterpreteLisp.java | 27 +--------------------
+ 2 files changed, 36 insertions(+), 35 deletions(-)
+
+commit 06e976f7372a0b87c8491a4da50e6937bd6c7fe6
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 8 20:34:18 2019 -0600
+
+    Subiendo prueba con StringTokenizer
+
+ InterpreteLisp/src/FileManager.java    | 18 +++++++++---------
+ InterpreteLisp/src/InterpreteLisp.java | 13 +++++++++++--
+ 2 files changed, 20 insertions(+), 11 deletions(-)
+
+commit d6c87d81e2bfc73fef6a17d9ed49b0827d40120a
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 8 17:13:30 2019 -0600
+
+    Update .gitignore
+
+ .gitignore | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 10fe3d383dd5ac0940c111158ff58984f6061f14
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 8 12:16:23 2019 -0600
+
+    Agregando metodo para retornar chars dentro de un array del conenido del archivo
+
+ InterpreteLisp/src/FileManager.java    | 10 +++++-----
+ InterpreteLisp/src/InterpreteLisp.java | 14 +++++++++-----
+ 2 files changed, 14 insertions(+), 10 deletions(-)
+
+commit b72459d5ff4c427f364fc3007411ea30f06c2d60
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 8 12:10:29 2019 -0600
+
+    Agregando metodo para separar el string pro caracteres
+
+ InterpreteLisp/src/FileManager.java    | 14 ++++++++++
+ InterpreteLisp/src/InterpreteLisp.java | 48 +++++++++++++++++++++++-----------
+ InterpreteLisp/src/OperationTree.java  | 17 ++++++++++++
+ 3 files changed, 64 insertions(+), 15 deletions(-)
+
+commit bd030387a3d4d737a1914db0de8a27225c46dc3a
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Mar 4 09:09:11 2019 -0600
+
+    Componiendo lectura de archivo en base al menú que se agrego
+
+ InterpreteLisp/src/FileManager.java    |  51 +--
+ InterpreteLisp/src/InterpreteLisp.java |  38 +-
+ InterpreteLisp/src/Keyboard.java       | 627 +++++++++++++++++++++++++++++++++
+ 3 files changed, 692 insertions(+), 24 deletions(-)
+
+commit 8468367b3bf9c1fec5d87757e1eace7d4398f645
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Mar 3 20:39:59 2019 -0600
+
+    Update FileManager.java
+
+ InterpreteLisp/src/FileManager.java | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit a7ff5760934c8d1b2ea16d66a9c3b8921aed48ec
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 1 10:23:57 2019 -0600
+
+    Update .gitignore
+
+ .gitignore | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 4e937d5874a8cba6114f1690456aa5c20cfab2db
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Mar 1 10:22:56 2019 -0600
+
+    agregando lectura de archivo y empezando a construir la interfaz del controlador y su implementación
+
+ InterpreteLisp/src/FileManager.java     | 48 +++++++++++++++++++++++++++++++++
+ InterpreteLisp/src/InterpreteLisp.java  | 36 ++++++++++++++-----------
+ InterpreteLisp/src/LispController.java  | 23 ++++++++++++++++
+ InterpreteLisp/src/iLispController.java | 18 +++++++++++++
+ 4 files changed, 109 insertions(+), 16 deletions(-)
+
+commit f62ba136073664802e4a386cbe297a520cc767a8
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 16:00:01 2019 -0600
+
+    cargando jpg del diagrama de secuencia
+
+ .../Diagrama de secuencia LISP.jpg                     | Bin 0 -> 182282 bytes
+ .../~$$Diagrama de secuencia LISP.~vsdx                | Bin 4096 -> 0 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 2da43fd1243e6939ae47ad6cf71cfbbea251900e
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 15:59:36 2019 -0600
+
+    Update Diagrama de secuencia LISP.vsdx
+
+ .../Diagrama de secuencia LISP.vsdx                 | Bin 51487 -> 54330 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4712c7aab2bee0f42f78ae90dcacd97f6bde1644
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 15:16:18 2019 -0600
+
+    Ordenando directorio y creando UML de secuencia
+
+ UML/{ => Diagrama de Clases}/Diagrama de Clases.dia     | Bin
+ UML/{ => Diagrama de Clases}/Diagrama de Clases.dia~    | Bin
+ UML/{ => Diagrama de Clases}/Diagrama de Clases.png     | Bin
+ .../Diagrama de secuencia LISP.vsdx                     | Bin 0 -> 51487 bytes
+ .../~$$Diagrama de secuencia LISP.~vsdx                 | Bin 0 -> 4096 bytes
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 935e78dc7b27e9952b181e0ac58fd15eea3fa4c0
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 14:41:21 2019 -0600
+
+    cambiando clase iGenerico a iLista y cambiando referencia
+
+ UML/Diagrama de Clases.dia  | Bin 2467 -> 2528 bytes
+ UML/Diagrama de Clases.dia~ | Bin 2471 -> 2456 bytes
+ UML/Diagrama de Clases.png  | Bin 23044 -> 22888 bytes
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 41a026b4b002a685370d8134b7b4a53caad4b804
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 13:46:06 2019 -0600
+
+    ordenando reposiroeio
+
+ "Documentaci\303\263n/1991-Lisp-manual.pdf"            | Bin 0 -> 140012 bytes
+ lispstick.zip => Recursos/Ejecutable Lispstick.zip     | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/atom.PNG         | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/cond.PNG         | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/defun.PNG        | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/equal.PNG        | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/list.PNG         | Bin
+ {LISP Code => Recursos/Sintaxis LISP}/suma - resta.PNG | Bin
+ 8 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 48c03729f76cee3565aaba777d257df86f819615
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 17 13:42:12 2019 -0600
+
+    Update README.md
+
+ README.md | 19 +++++++++++++------
+ 1 file changed, 13 insertions(+), 6 deletions(-)
+
+commit 1ff8a2e56167c147040192441f192067f924e152
+Merge: 4dcf655 be029f8
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 10:36:30 2019 -0600
+
+    Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+
+commit 4dcf65563078f051ca278621d7b090e5e60abc8c
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 10:36:27 2019 -0600
+
+    captura de funcionamiento de lenguaje
+    
+    Co-Authored-By: juanferdeleon <juanferdeleon@users.noreply.github.com>
+
+ LISP Code/#Pruebas#        |   2 --
+ LISP Code/Pruebas          |   2 --
+ LISP Code/atom.PNG         | Bin 0 -> 109957 bytes
+ LISP Code/cond.PNG         | Bin 0 -> 90391 bytes
+ LISP Code/defun.PNG        | Bin 0 -> 97463 bytes
+ LISP Code/equal.PNG        | Bin 0 -> 91824 bytes
+ LISP Code/list.PNG         | Bin 0 -> 90095 bytes
+ LISP Code/suma - resta.PNG | Bin 0 -> 89447 bytes
+ 8 files changed, 4 deletions(-)
+
+commit be029f84484160ad2fa63214283e3d6ca2b08c24
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 10:06:18 2019 -0600
+
+    Update README.md
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8953d77d9185720d1940ba389a09300492de6909
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 09:30:35 2019 -0600
+
+    Update README.md
+
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3b39434802e4855e17523988512fde52727fb0c4
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 09:29:48 2019 -0600
+
+    Update README.md
+
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit e05057909c94c17b52aada0a63c75c57a918fb5e
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 09:24:34 2019 -0600
+
+    actualizando diagrama UML
+
+ UML/Diagrama de Clases.png | Bin 7500 -> 23044 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit bf4f6e18d3ecd276b7d32e7df812ad94713be33c
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Fri Feb 15 09:22:32 2019 -0600
+
+    codigo lisp
+
+ LISP Code/#Pruebas# | 2 ++
+ LISP Code/Pruebas   | 2 ++
+ 2 files changed, 4 insertions(+)
+
+commit 7bc3ce8c4ce77cb2d334530819de532d8630d26f
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 12:10:05 2019 -0600
+
+    creando clases de UML
+    
+    @juanferdeleon
+
+ UML/Diagrama de Clases.dia  | Bin 1922 -> 2467 bytes
+ UML/Diagrama de Clases.dia~ | Bin 1919 -> 2471 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 326f26dd80e31af5dda0bc5fcf6174e659432016
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 11:41:10 2019 -0600
+
+    modificando UML con nuevas clases
+
+ UML/Diagrama de Clases.dia  | Bin 1706 -> 1922 bytes
+ UML/Diagrama de Clases.dia~ | Bin 1617 -> 1919 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 4d3229854e5d763735d69a14c07b4acf48062937
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 11:21:01 2019 -0600
+
+    actualizando diagrama UML de diseño
+
+ UML/Diagrama de Clases.dia  | Bin 1617 -> 1706 bytes
+ UML/Diagrama de Clases.dia~ | Bin 1514 -> 1617 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit f03fe2dd56b995934b605e33f7d1324dddb60697
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 11:15:28 2019 -0600
+
+    Create Diagrama de Clases.png
+
+ UML/Diagrama de Clases.png | Bin 0 -> 7500 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f4f7e92bcdc8dcfb3aaf0177941641e4ebc539b
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 11:15:12 2019 -0600
+
+    actualizando UML
+
+ UML/Diagrama de Clases.dia  | Bin 1514 -> 1617 bytes
+ UML/Diagrama de Clases.dia~ | Bin 1184 -> 1514 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bd7583a45a9a1c1cd78f678f976921d2b5c6636e
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Mon Feb 11 10:59:55 2019 -0600
+
+    creando clase main
+
+ UML/Diagrama de Clases.dia  | Bin 1184 -> 1514 bytes
+ UML/Diagrama de Clases.dia~ | Bin 0 -> 1184 bytes
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit cfb742212c946bf6ceeb82d73450eae78b396375
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Thu Feb 7 21:34:25 2019 -0600
+
+    Create Diagrama de Clases.dia
+
+ UML/Diagrama de Clases.dia | Bin 0 -> 1184 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 493256e307bb2c5f9e8c33271c59efcfbe9d963e
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 3 19:44:28 2019 -0600
+
+    modificando readme y cargando ejecutable LISPtick
+
+ README.md     |  30 +++++++++++++++++++++++++++++-
+ lispstick.zip | Bin 0 -> 67244989 bytes
+ 2 files changed, 29 insertions(+), 1 deletion(-)
+
+commit 853d5e638f5be22e64aed12969fb2a4179003222
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 3 19:37:42 2019 -0600
+
+    Create Requerimiento.pdf
+
+ Requerimiento.pdf | Bin 0 -> 151821 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fe077ca320d4e602671a993cb8a58525f66fd43f
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 3 19:27:44 2019 -0600
+
+    creando proyecto en blanco
+
+ .gitignore                                   |    1 +
+ InterpreteLisp/build.xml                     |   73 ++
+ InterpreteLisp/manifest.mf                   |    3 +
+ InterpreteLisp/nbproject/build-impl.xml      | 1420 ++++++++++++++++++++++++++
+ InterpreteLisp/nbproject/genfiles.properties |    8 +
+ InterpreteLisp/nbproject/project.properties  |   74 ++
+ InterpreteLisp/nbproject/project.xml         |   15 +
+ InterpreteLisp/src/InterpreteLisp.java       |   16 +
+ 8 files changed, 1610 insertions(+)
+
+commit ce3a614b0c9db89d0a9f42725002197beda29006
+Author: Pablo Sao <pablo_sao@outlook.com>
+Date:   Sun Feb 3 17:35:06 2019 -0600
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)

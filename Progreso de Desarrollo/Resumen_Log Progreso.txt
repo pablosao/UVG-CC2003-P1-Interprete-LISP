@@ -1,0 +1,76 @@
+Mon Mar 18 23:08:34 2019 -0600 - Pablo Sao: Create Funcionamiento.mp4
+Mon Mar 18 21:49:28 2019 -0600 - Pablo Sao: subiendo archivos de texto para pruebas realizadas con la sintaxis de LISP
+Mon Mar 18 21:46:22 2019 -0600 - Pablo Sao: Agregando funcionalidad de instrucciones dentro del defun
+Mon Mar 18 19:17:05 2019 -0600 - Pablo Sao: Update InterpreteLisp.java
+Mon Mar 18 18:20:19 2019 -0600 - Pablo Sao: Delete OperationTree.java
+Mon Mar 18 18:06:35 2019 -0600 - Pablo Sao: Eliminando clases que no se utilizan, se comenta el de test.
+Mon Mar 18 13:54:05 2019 -0600 - Juan De Leon: Se ajusta para la ejecucion de la instruccion dentro de un defun -psao
+Mon Mar 18 11:42:19 2019 -0600 - Pablo Sao: Update DataManager.java
+Mon Mar 18 11:22:16 2019 -0600 - Juan De Leon: Instrucciones
+Mon Mar 18 11:16:50 2019 -0600 - Juan De Leon: Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+Mon Mar 18 11:16:42 2019 -0600 - Juan De Leon: Test
+Mon Mar 18 11:13:53 2019 -0600 - Pablo Sao: Update DefunTest.java
+Mon Mar 18 11:12:22 2019 -0600 - Pablo Sao: Subiendo division de instrucciones
+Mon Mar 18 11:01:23 2019 -0600 - Juan De Leon: Correcciones Defun
+Mon Mar 18 10:49:46 2019 -0600 - Pablo Sao: Update DataManager.java
+Mon Mar 18 10:45:15 2019 -0600 - Pablo Sao: Incorporanndo funcionamiento de separación de instrucciones
+Sun Mar 17 19:55:20 2019 -0600 - Juan De Leon: Comentarios
+Sun Mar 17 19:45:50 2019 -0600 - Juan De Leon: Cambios
+Sun Mar 17 19:08:33 2019 -0600 - Juan De Leon: Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+Sun Mar 17 19:08:24 2019 -0600 - Juan De Leon: Defun Instructions
+Sun Mar 17 18:08:26 2019 -0600 - Pablo Sao: Componiendo parseo de instrucciones de LISP, relacionado al bug: https://github.com/psao/UVG-CC2003-P1-Interprete-LISP/issues/1
+Sun Mar 17 16:59:32 2019 -0600 - Juan De Leon: Comentarios
+Sun Mar 17 16:49:07 2019 -0600 - Juan De Leon: Defun
+Sun Mar 17 11:50:32 2019 -0600 - Juan De Leon: Comparadores mayor y menor que
+Sun Mar 17 11:13:44 2019 -0600 - Juan De Leon: List and equal implemented
+Fri Mar 15 22:07:18 2019 -0600 - Pablo Sao: Se agrega función de atom y se incorpora al metodo que ejecuta la instrucción de LISP
+Fri Mar 15 11:40:58 2019 -0600 - Pablo Sao: Clase completada, limpiando código y comentando
+Fri Mar 15 11:31:24 2019 -0600 - Pablo Sao: Corrigiendo para operación aritmetica recursiva por medio de stack
+Fri Mar 15 09:27:31 2019 -0600 - Pablo Sao: Componiendo para que sume más de 2 números
+Thu Mar 14 15:13:45 2019 -0600 - Pablo Sao: Agregando manejo de errores
+Thu Mar 14 15:00:41 2019 -0600 - Pablo Sao: Se agrega el despliegue en la terminal de la instrucción a evaluar
+Thu Mar 14 14:47:12 2019 -0600 - Juan De Leon: Arithmetic calculator
+Thu Mar 14 07:59:01 2019 -0600 - Pablo Sao: Update DataManager.java
+Wed Mar 13 18:45:16 2019 -0600 - Pablo Sao: Update README.md
+Wed Mar 13 18:32:39 2019 -0600 - Pablo Sao: Parseo del lenguaje terminado. Se almacena la sintaxis en un conjunto de arreglos, según la estructura de los parentesis.
+Wed Mar 13 17:34:59 2019 -0600 - Pablo Sao: Corrigiendo parser de la instrucción, mediante recursión de un método de objetos
+Wed Mar 13 16:00:24 2019 -0600 - Pablo Sao: Subierndo parseo de la instrucción
+Wed Mar 13 10:13:11 2019 -0600 - Pablo Sao: subiendo cambios en getInstruccion
+Wed Mar 13 09:35:11 2019 -0600 - Pablo Sao: Se comenta partes pendientes para evitar problemas de ejecución
+Wed Mar 13 09:33:32 2019 -0600 - Pablo Sao: Queda pendiente componer el parseo de la instrucción, actualmente da error
+Wed Mar 13 00:31:30 2019 -0600 - Pablo Sao: Subiendo metodo para obtener el arreglo de las instrucciones
+Tue Mar 12 23:56:20 2019 -0600 - Pablo Sao: se agrega metodo para corroborar que solo se ingresen signos permitidos, y hay que componer logica del manejo de esta validación en el LispController
+Tue Mar 12 22:39:05 2019 -0600 - Pablo Sao: Componiendo problema al retornar lista, se agrega manejo de erroes en el menu
+Sun Mar 10 09:34:05 2019 -0600 - Pablo Sao: Creando métodos para manejo de parseo
+Fri Mar 8 20:34:18 2019 -0600 - Pablo Sao: Subiendo prueba con StringTokenizer
+Fri Mar 8 17:13:30 2019 -0600 - Pablo Sao: Update .gitignore
+Fri Mar 8 12:16:23 2019 -0600 - Pablo Sao: Agregando metodo para retornar chars dentro de un array del conenido del archivo
+Fri Mar 8 12:10:29 2019 -0600 - Pablo Sao: Agregando metodo para separar el string pro caracteres
+Mon Mar 4 09:09:11 2019 -0600 - Pablo Sao: Componiendo lectura de archivo en base al menú que se agrego
+Sun Mar 3 20:39:59 2019 -0600 - Pablo Sao: Update FileManager.java
+Fri Mar 1 10:23:57 2019 -0600 - Pablo Sao: Update .gitignore
+Fri Mar 1 10:22:56 2019 -0600 - Pablo Sao: agregando lectura de archivo y empezando a construir la interfaz del controlador y su implementación
+Sun Feb 17 16:00:01 2019 -0600 - Pablo Sao: cargando jpg del diagrama de secuencia
+Sun Feb 17 15:59:36 2019 -0600 - Pablo Sao: Update Diagrama de secuencia LISP.vsdx
+Sun Feb 17 15:16:18 2019 -0600 - Pablo Sao: Ordenando directorio y creando UML de secuencia
+Sun Feb 17 14:41:21 2019 -0600 - Pablo Sao: cambiando clase iGenerico a iLista y cambiando referencia
+Sun Feb 17 13:46:06 2019 -0600 - Pablo Sao: ordenando reposiroeio
+Sun Feb 17 13:42:12 2019 -0600 - Pablo Sao: Update README.md
+Fri Feb 15 10:36:30 2019 -0600 - Pablo Sao: Merge branch 'master' of https://github.com/psao/UVGCC2003-04-Interprete-LISP
+Fri Feb 15 10:36:27 2019 -0600 - Pablo Sao: captura de funcionamiento de lenguaje
+Fri Feb 15 10:06:18 2019 -0600 - Pablo Sao: Update README.md
+Fri Feb 15 09:30:35 2019 -0600 - Pablo Sao: Update README.md
+Fri Feb 15 09:29:48 2019 -0600 - Pablo Sao: Update README.md
+Fri Feb 15 09:24:34 2019 -0600 - Pablo Sao: actualizando diagrama UML
+Fri Feb 15 09:22:32 2019 -0600 - Pablo Sao: codigo lisp
+Mon Feb 11 12:10:05 2019 -0600 - Pablo Sao: creando clases de UML
+Mon Feb 11 11:41:10 2019 -0600 - Pablo Sao: modificando UML con nuevas clases
+Mon Feb 11 11:21:01 2019 -0600 - Pablo Sao: actualizando diagrama UML de diseño
+Mon Feb 11 11:15:28 2019 -0600 - Pablo Sao: Create Diagrama de Clases.png
+Mon Feb 11 11:15:12 2019 -0600 - Pablo Sao: actualizando UML
+Mon Feb 11 10:59:55 2019 -0600 - Pablo Sao: creando clase main
+Thu Feb 7 21:34:25 2019 -0600 - Pablo Sao: Create Diagrama de Clases.dia
+Sun Feb 3 19:44:28 2019 -0600 - Pablo Sao: modificando readme y cargando ejecutable LISPtick
+Sun Feb 3 19:37:42 2019 -0600 - Pablo Sao: Create Requerimiento.pdf
+Sun Feb 3 19:27:44 2019 -0600 - Pablo Sao: creando proyecto en blanco
+Sun Feb 3 17:35:06 2019 -0600 - Pablo Sao: Initial commit
